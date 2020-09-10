@@ -28,6 +28,12 @@ Todas las plantillas de Inovatik tienen licencia de Creative Commons Attribution
 
 * Armado de template (2 horas)
 
+
+## Referencias de la terapia
+http://oa.upm.es/21318/1/PFC_ALVARO_RODRIGUEZ_LOPEZ.pdf
+https://www.centroauditivo-valencia.es/acufenometria-evaluacion-acufeno-tinnitus/
+http://www.clinicaaudinsa.com/espanol/documentos/estudiantes/Resumen_Enmascaramiento_audiometrico.pdf
+
 ### Input range (slider range)
 https://www.youtube.com/watch?v=0hZ2TJWtKgk
 https://www.youtube.com/watch?v=LNkjivRSyd4
