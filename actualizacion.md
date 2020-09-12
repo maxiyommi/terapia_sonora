@@ -12,3 +12,6 @@
 - [ ] Ver los link de las redes sociales
 - [x] disminuir la velocidad de Rotating Text. (ahora a 3000mili)
 - [x] cambiar el texto del header.
+- [ ] unificar controles para los distinos sistemas operativos.(http://demo.codesamplez.com/javascript/audio)
+- [ ] pasar una version a flask, para darle a Fabri.
+- [ ] trabajar con el dashboard de perfiles

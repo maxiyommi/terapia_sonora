@@ -1817,6 +1817,20 @@ section{
 /*************************/
 /*     Media Queries     */
 /*************************/	
+
+/* Min-width 768px */
+@media (min-width: 300px) {
+	/* General Styles */
+	
+		.p-heading {
+			width: 85%;
+			margin-right: auto;
+			margin-left: auto;
+			text-align: justify;
+		}
+	/* end of general styles */
+}
+
 /* Min-width 768px */
 @media (min-width: 768px) {
 
@@ -1998,7 +2012,7 @@ section{
 	}
 
 	.p-heading {
-		width: 75%;
+		width: 50%;
 		margin-right: auto;
 		margin-left: auto;
 		text-align: justify;
