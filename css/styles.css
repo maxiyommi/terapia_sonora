@@ -1820,8 +1820,8 @@ section{
 
 /* Min-width 768px */
 @media (min-width: 250px) {
-	/* General Styles */
 	
+	/* General Styles */
 		.p-heading {
 			width: 85%;
 			margin-right: auto;
