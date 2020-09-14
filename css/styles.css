@@ -1819,7 +1819,7 @@ section{
 /*************************/	
 
 /* Min-width 768px */
-@media (min-width: 300px) {
+@media (min-width: 250px) {
 	/* General Styles */
 	
 		.p-heading {
