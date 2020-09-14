@@ -1035,10 +1035,22 @@ input[type='checkbox'] {
 	margin-bottom: 0.75rem;
 }
 
+
+
+/*Zoom In*/
 .cards-2 .card-image img {
 	margin-bottom: 0.5rem;
 	max-width: 2.75rem;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
+.cards-2 .card-image:hover img{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
 
 .cards-2 .card .fas {
 	color: #7be850;
@@ -2294,6 +2306,8 @@ section{
 	/* General Styles */
 	.p-heading {
 		width: 65%;
+		margin-right: auto;
+		margin-left: auto;
 		text-align: justify;
 	}
 	/* end of general styles */
