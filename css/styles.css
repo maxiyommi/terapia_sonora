@@ -1830,7 +1830,7 @@ section{
 /*     Media Queries     */
 /*************************/	
 
-/* Min-width 768px */
+/* Min-width 250px */
 @media (min-width: 250px) {
 	
 	/* General Styles */
@@ -1841,6 +1841,10 @@ section{
 			text-align: justify;
 		}
 	/* end of general styles */
+
+	.basic-2 .takeaway-audio {
+		margin-left: 3.2rem;
+	}
 }
 
 /* Min-width 768px */
@@ -1900,6 +1904,10 @@ section{
 	.basic-2 .takeaway-text {
 		display: inline-block;
 		width: 35.75rem;
+	}
+
+	.basic-2 .takeaway-audio {
+		margin-left: 3.2rem;
 	}
 	/* end of takeaways */
 
@@ -2416,6 +2424,10 @@ section{
 	
 	.basic-2 .takeaway-text {
 		width: 13.5rem;
+	}
+
+	.basic-2 .takeaway-audio {
+		margin-left: .4rem;
 	}
 	/* end of takeaways */
 

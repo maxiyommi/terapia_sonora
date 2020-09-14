@@ -6,7 +6,7 @@
 - [X] Ordenar iconos (accesible, amigable y personal) y usar recatangulos para los tres sintomas.
 - [ ] volumen independiente
 - [X] normalizar los sonidos (LKFS).
-- [ ] Siguen invertidos los sonidos de lluvia pesada y ligera.
+- [x] Siguen invertidos los sonidos de lluvia pesada y ligera.
 - [ ] Faltaría el mixer para elegir el tono puro, y el mixer para elegir la banda estrecha. 
 - [ ] Ver de linquear el dominio .com
 - [ ] Ver los link de las redes sociales
