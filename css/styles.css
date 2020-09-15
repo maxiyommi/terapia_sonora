@@ -1843,7 +1843,8 @@ section{
 	/* end of general styles */
 
 	.basic-2 .takeaway-audio {
-		margin-left: 3.2rem;
+		margin-right: auto;
+			margin-left: auto;
 	}
 }
 
