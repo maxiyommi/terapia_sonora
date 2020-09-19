@@ -2,6 +2,8 @@
 
 ## Fecha 11 de septiembre
 
+* **cantidad de horas:** 5
+
 - [ ] Reemplazar lorem ipsum por contenido enviado por Magali.
 - [X] Ordenar iconos (accesible, amigable y personal) y usar recatangulos para los tres sintomas.
 - [ ] volumen independiente
@@ -15,3 +17,9 @@
 - [ ] unificar controles para los distinos sistemas operativos.(http://demo.codesamplez.com/javascript/audio)
 - [ ] pasar una version a flask, para darle a Fabri.
 - [ ] trabajar con el dashboard de perfiles
+
+## Fecha 18 de septiembre
+
+- [] agregar gitignore file.
+- [] cambiar fuente de logo.
+- [] organizar carpetas, path y contenido.
