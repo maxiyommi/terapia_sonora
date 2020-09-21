@@ -2,24 +2,27 @@
 
 ## Fecha 11 de septiembre
 
-* **cantidad de horas:** 5
 
 - [ ] Reemplazar lorem ipsum por contenido enviado por Magali.
+	- [ ] Ver de agregar el contenido de "como surge SONORA".
 - [X] Ordenar iconos (accesible, amigable y personal) y usar recatangulos para los tres sintomas.
-- [ ] volumen independiente
+- [ ] volumen independiente. En el mixer.
 - [X] normalizar los sonidos (LKFS).
 - [x] Siguen invertidos los sonidos de lluvia pesada y ligera.
 - [ ] Faltaría el mixer para elegir el tono puro, y el mixer para elegir la banda estrecha. 
-- [ ] Ver de linquear el dominio .com
-- [ ] Ver los link de las redes sociales
+- [ ] Ver de linquear el dominio .com.
+- [ ] Ver los link de las redes sociales.
 - [x] disminuir la velocidad de Rotating Text. (ahora a 3000mili)
 - [x] cambiar el texto del header.
-- [ ] unificar controles para los distinos sistemas operativos.(http://demo.codesamplez.com/javascript/audio)
+- [ ] unificar controles para los distinos sistemas operativos.(http://demo.codesamplez.com/javascript/audio).
 - [ ] pasar una version a flask, para darle a Fabri.
-- [ ] trabajar con el dashboard de perfiles
+- [ ] trabajar con el dashboard de perfiles.
 
 ## Fecha 18 de septiembre
 
-- [] agregar gitignore file.
-- [] cambiar fuente de logo.
-- [] organizar carpetas, path y contenido.
+- [ ] agregar gitignore file.
+- [x] cambiar fuente de logo.
+- [x] organizar carpetas, path y contenido.
+
+## Fecha 19 de septiembre
+- [x] armando diseño de mixer base para fabricio.

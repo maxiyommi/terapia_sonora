@@ -1,21 +1,20 @@
 # Landing page Sonora
 Repositorio del proyecto SONORA
 
-## Documentacion
-https://docs.google.com/document/d/1ugy5WmzbXrTaXAkonBSikriA0KSrUoubIkvGxgXH-ZA/edit#heading=h.z6ne0og04bp5
+* [Documentación del proyecto + presupuesto](https://docs.google.com/document/d/1ugy5WmzbXrTaXAkonBSikriA0KSrUoubIkvGxgXH-ZA/edit#heading=h.z6ne0og04bp5)
 
-## Template
-Descargado: https://inovatik.com/tutor-video-course-landing-page-template.html 
+* [Aplicación parecida](https://www.relaxmelodies.com/)
 
-Inspiración: https://inovatik.com/riga-landing-page/index.html
 
-## Aplicacion parecida
-https://www.relaxmelodies.com/
-## Icons
+## Material utilizado
 
-https://www.flaticon.es/
+### Template de base
 
-### Licencia de uso
+* [Descargado](https://inovatik.com/tutor-video-course-landing-page-template.html)
+
+* [Inspiración](https://inovatik.com/riga-landing-page/index.html)
+
+#### Licencia de uso
 Todas las plantillas de Inovatik tienen licencia de Creative Commons Attribution 3.0 License
 
 * Puede usarlos para un número ilimitado de proyectos personales y comerciales.
@@ -24,9 +23,9 @@ Todas las plantillas de Inovatik tienen licencia de Creative Commons Attribution
 * No puede eliminar el texto de copyright de atribución y el enlace en la parte inferior de la página
 * No puede distribuir, ofrecer descarga gratuita o revender las plantillas
 
-### Actividades
+### Icons
 
-* Armado de template (2 horas)
+https://www.flaticon.es/
 
 
 ## Referencias de la terapia
