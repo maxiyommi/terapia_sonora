@@ -1,5 +1,5 @@
 # Landing page Sonora
-Repositorio del proyecto SONORA
+Repositorio del proyecto [SONORA](https://tuterapiasonora.com.ar/)
 
 * [Documentación del proyecto + presupuesto](https://docs.google.com/document/d/1ugy5WmzbXrTaXAkonBSikriA0KSrUoubIkvGxgXH-ZA/edit#heading=h.z6ne0og04bp5)
 
@@ -28,8 +28,8 @@ Todas las plantillas de Inovatik tienen licencia de Creative Commons Attribution
 https://www.flaticon.es/
 
 
-## Referencias de la terapia
-http://oa.upm.es/21318/1/PFC_ALVARO_RODRIGUEZ_LOPEZ.pdf
+## Referencias de la terapia de acufenos
+[Ver capítulo 6 y 7](http://oa.upm.es/21318/1/PFC_ALVARO_RODRIGUEZ_LOPEZ.pdf)
 https://www.centroauditivo-valencia.es/acufenometria-evaluacion-acufeno-tinnitus/
 http://www.clinicaaudinsa.com/espanol/documentos/estudiantes/Resumen_Enmascaramiento_audiometrico.pdf
 
@@ -37,8 +37,14 @@ http://www.clinicaaudinsa.com/espanol/documentos/estudiantes/Resumen_Enmascarami
 https://www.youtube.com/watch?v=0hZ2TJWtKgk
 https://www.youtube.com/watch?v=LNkjivRSyd4
 
+http://danielstern.ca/range.css/#/ 
+https://dev.to/richiksc/standardizing-input-type-range-styling-3lkl     
+
 ## Audio
-https://codesamplez.com/programming/control-html5-audio-with-jquery
-https://codesamplez.com/programming/html5-audio-api-tutorial
-http://demo.codesamplez.com/javascript/audio
-https://developer.mozilla.org/es/docs/Web/HTML/Usando_audio_y_video_con_HTML5
+Libreria utilizada s- [Tone.js](https://tonejs.github.io/)
+
+### Referencia
+* [Control HTML5 Audio With Jquery](https://codesamplez.com/programming/control-html5-audio-with-jquery)
+* [HTML5 Audio API Tutorial](https://codesamplez.com/programming/html5-audio-api-tutorial)
+* [Javascript Audio Controller](http://demo.codesamplez.com/javascript/audio)
+* [Usando audio y video con HTML5](https://developer.mozilla.org/es/docs/Web/HTML/Usando_audio_y_video_con_HTML5)
