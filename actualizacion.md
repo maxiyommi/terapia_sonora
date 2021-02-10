@@ -26,3 +26,17 @@
 - [ ] Ver los link de las redes sociales. Falta FACEBOOK.
 - [ ] pasar una version a flask, para darle a Fabri.
 - [ ] trabajar con el dashboard de perfiles.
+
+## Fecha 09 de Febrero 2021
+- [x] Limpieza de .js.
+- [x] Limpiar .css
+- [ ] Agregar el www, en el CNAME
+- [ ] ver warning: Source map error: Error: request failed with status 404
+Resource URL: http://127.0.0.1:5500/static/css/bootstrap.css
+Source Map URL: bootstrap.css.map
+
+branch master-prueba --> para trabajar la adecuacion del mixer
+
+//CONTINUAR//
+- UNIFICAR CSS DE MIXER 
+- UNIFICAR MIXER.JS

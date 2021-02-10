@@ -24,9 +24,12 @@ Todas las plantillas de Inovatik tienen licencia de Creative Commons Attribution
 * No puede distribuir, ofrecer descarga gratuita o revender las plantillas
 
 ### Icons
-
 https://www.flaticon.es/
 
+https://www.freepik.es/vector-gratis/ilustracion-concepto-cascos-musica_8610295.htm
+
+### Imagenes
+https://www.freepik.es
 
 ## Referencias de la terapia de acufenos
 [Ver capítulo 6 y 7](http://oa.upm.es/21318/1/PFC_ALVARO_RODRIGUEZ_LOPEZ.pdf)

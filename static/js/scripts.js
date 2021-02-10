@@ -1,6 +1,7 @@
 /* Template: Tutor - Video Course Landing Page Template
-   Author: Inovatik
+   Author: Creado por Inovatik y adaptado por Infiniem Acústica
    Description: Custom JS file
+   Ref: https://inovatik.com/tutor-video-course-website-bootstrap-html-template.html
 */
 
 
@@ -44,32 +45,6 @@
             // Called after the entrance animation is executed.
         }
     });
-
-    /* Card Slider - Swiper */
-	var cardSlider = new Swiper('.card-slider', {
-		autoplay: {
-            delay: 4000,
-            disableOnInteraction: false
-		},
-        loop: true,
-        navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
-		},
-		slidesPerView: 3,
-		spaceBetween: 20,
-        breakpoints: {
-            // when window is <= 767px
-            767: {
-                slidesPerView: 1
-            },
-            // when window is <= 991px
-            991: {
-                slidesPerView: 2
-            }
-        }
-    });
-
 
     /* Details Lightbox - Magnific Popup */
 	$('.popup-with-move-anim').magnificPopup({
@@ -115,160 +90,7 @@
                 }
             }
         }
-    });
-
-
-    /* Counter - CountTo */
-	var a = 0;
-	$(window).scroll(function() {
-		if ($('#counter').length) { // checking if CountTo section exists in the page, if not it will not run the script and avoid errors	
-			var oTop = $('#counter').offset().top - window.innerHeight;
-			if (a == 0 && $(window).scrollTop() > oTop) {
-			$('.counter-value').each(function() {
-				var $this = $(this),
-				countTo = $this.attr('data-count');
-				$({
-				countNum: $this.text()
-				}).animate({
-					countNum: countTo
-				},
-				{
-					duration: 2000,
-					easing: 'swing',
-					step: function() {
-					$this.text(Math.floor(this.countNum));
-					},
-					complete: function() {
-					$this.text(this.countNum);
-					//alert('finished');
-					}
-				});
-			});
-			a = 1;
-			}
-		}
-    });
-    
-
-    /* Move Form Fields Label When User Types */
-    // for input and textarea fields
-    $("input, textarea").keyup(function(){
-		if ($(this).val() != '') {
-			$(this).addClass('notEmpty');
-		} else {
-			$(this).removeClass('notEmpty');
-		}
-    });
-
-
-    /* Newsletter Form */
-    $("#newsletterForm").validator().on("submit", function(event) {
-    	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            nformError();
-            nsubmitMSG(false, "Please fill all fields!");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            nsubmitForm();
-        }
-    });
-
-    function nsubmitForm() {
-        // initiate variables with form content
-		var email = $("#nemail").val();
-        $.ajax({
-            type: "POST",
-            url: "php/newsletterform-process.php",
-            data: "email=" + email, 
-            success: function(text) {
-                if (text == "success") {
-                    nformSuccess();
-                } else {
-                    nformError();
-                    nsubmitMSG(false, text);
-                }
-            }
-        });
-	}
-
-    function nformSuccess() {
-        $("#newsletterForm")[0].reset();
-        nsubmitMSG(true, "Subscribed!");
-        $("input").removeClass('notEmpty'); // resets the field label after submission
-    }
-
-    function nformError() {
-        $("#newsletterForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass();
-        });
-	}
-
-    function nsubmitMSG(valid, msg) {
-        if (valid) {
-            var msgClasses = "h3 text-center tada animated";
-        } else {
-            var msgClasses = "h3 text-center";
-        }
-        $("#nmsgSubmit").removeClass().addClass(msgClasses).text(msg);
-    }
-
-
-    /* Contact Form */
-    $("#contactForm").validator().on("submit", function(event) {
-    	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            cformError();
-            csubmitMSG(false, "Please fill all fields!");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            csubmitForm();
-        }
-    });
-
-    function csubmitForm() {
-        // initiate variables with form content
-		var name = $("#cname").val();
-		var email = $("#cemail").val();
-        var message = $("#cmessage").val();
-        $.ajax({
-            type: "POST",
-            url: "php/contactform-process.php",
-            data: "name=" + name + "&email=" + email + "&message=" + message, 
-            success: function(text) {
-                if (text == "success") {
-                    cformSuccess();
-                } else {
-                    cformError();
-                    csubmitMSG(false, text);
-                }
-            }
-        });
-	}
-
-    function cformSuccess() {
-        $("#contactForm")[0].reset();
-        csubmitMSG(true, "Message Submitted!");
-        $("input").removeClass('notEmpty'); // resets the field label after submission
-        $("textarea").removeClass('notEmpty'); // resets the field label after submission
-    }
-
-    function cformError() {
-        $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass();
-        });
-	}
-
-    function csubmitMSG(valid, msg) {
-        if (valid) {
-            var msgClasses = "h3 text-center tada animated";
-        } else {
-            var msgClasses = "h3 text-center";
-        }
-        $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
-    }
-    
+    });   
 
     /* Back To Top Button */
     // create the back to top button
