@@ -1,15 +1,15 @@
-*{  
-    box-sizing: border-box;
-    margin: 0;
-}
+/* Template: Mixer
+   Author: Creado por Infiniem Acústica
+   Description: Master CSS file mixer
+*/
 
 .flex_consola{
     background-color:#f0c27b;
-    display: flex;
     width: 450px;
-    flex-flow: row wrap;
 	margin: 20px;
 	border-radius: 20px;
+	display: flex;
+	flex-flow: row wrap;
 }
 
 /* INPUT */
@@ -35,6 +35,7 @@ input[type=range]::-webkit-slider-runnable-track {
 	cursor: pointer;
 	border-radius: 20px;
 }
+
 /* representa el selector que el usuario puede mover a lo largo de la ranura */	
 input[type=range]::-webkit-slider-thumb {
 	margin-top: -8.5px;

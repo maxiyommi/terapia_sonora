@@ -1,0 +1,131 @@
+/* Template: Mixer
+   Author: Creado por Infiniem Acústica
+   Description: Components mixer CSS file 
+*/
+
+/*****************************************
+Table Of Contents:
+
+- slider_pink
+
+- control play
+******************************************/
+
+
+/*********************/
+/*   slider_pink     */
+/*********************/
+
+.slider_pink {
+    background-color: transparent;
+    height: 80px;
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    align-items: center;
+    display: flex;
+}
+
+.slider_pink .label_pink {
+    background-color: transparent;
+    text-align:center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+}
+
+.slider_pink .input_range_pink {
+    background-color: transparent;
+    text-align: center;
+    width: 70%;
+    height: 9px;
+}
+
+.slider_pink .value_pink {
+    background-color: transparent;
+    text-align: center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+}
+/*
+This is for a future button of mute
+.slider_pink .switch_pink {
+    background-color: transparent;
+    border: transparent;
+    text-align: center;
+    width: 20%;
+}*/
+
+/*********************/
+/*   control play    */
+/*********************/
+
+.control .play {
+/* Everything about the play button*/
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 70px solid #d38157;
+    border-right: 40px solid transparent;
+    margin: 5px auto 50px auto;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    left: 30px; /* change this if you want to translate it on the x-axis  */
+    background-color: #f0c27b ;
+    transform: scale(0.6); /* change this if you want to scale it  */  
+}
+    
+.control .play:before {
+/*  Properties of the circle */
+    content: '';
+    position: absolute;
+    top: -75px;
+    left: -115px;
+    bottom: -75px;
+    right: -15px;
+    border-radius: 50%;
+    border: 10px solid #d38157;
+    z-index: 2;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+    
+.control .play:after {
+/* Properties of the play after it got clicked */
+    content: '';
+    opacity: 0;
+    transition: opacity 0.6s;
+    -webkit-transition: opacity 0.6s;
+    -moz-transition: opacity 0.6s;
+}
+
+.control .play:hover:before, .control .play:focus:before {
+/* The effect of scale when hover on play or in pause */
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+}
+
+.control .play.active {
+/* Properties of pause before it got clicked */
+    border-color: transparent;
+}
+
+.control .play.active:after {
+/* Properties of pause */
+    content: '';
+    opacity: 1;
+    width: 50px;
+    height: 80px;
+    background: #d38157;
+    position: absolute;
+    right: 23px;
+    top: -40px;
+    border-left: 20px solid #d38157;
+    box-shadow: inset 30px 0 0 0 #f0c27b;
+}
