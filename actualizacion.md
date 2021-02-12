@@ -35,7 +35,9 @@
 Resource URL: http://127.0.0.1:5500/static/css/bootstrap.css
 Source Map URL: bootstrap.css.map
 - [ ] Cambiar colores en la imagen de los auriculares.
-- [ ]
+- [ ] cambiar color de arrow 
+- [ ] cambiar los colores de bonotes narrow como "conocé más!"
+- [ ] ver iconos de mixer
 
 branch master-prueba --> para trabajar la adecuacion del mixer
 

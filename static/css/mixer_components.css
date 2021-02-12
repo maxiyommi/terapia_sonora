@@ -7,6 +7,11 @@
 Table Of Contents:
 
 - slider_pink
+- slider_white
+- slider_narrow 
+- slider_tonegen
+- slider_rain
+- slider_heavyRain
 
 - control play
 ******************************************/
@@ -59,6 +64,359 @@ This is for a future button of mute
 }*/
 
 /*********************/
+/*   slider_white    */
+/*********************/
+
+.slider_white {
+    background-color: transparent;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    align-items: center;
+}
+
+.slider_white .label_white {
+    background-color: transparent;
+    text-align:center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+}
+
+.slider_white .input_range_white {
+    background-color: transparent;
+    text-align: center;
+    width: 70%;
+}
+
+.slider_white .value_white {
+    background-color: transparent;
+    text-align: center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+}
+/*
+This is for a future button of mute
+.slider_white .switch_white {
+    background-color: transparent;
+    border: transparent;
+    text-align: center;
+    width: 20%;
+}*/
+
+/*********************/
+/*   slider_narrow   */
+/*********************/
+
+/* Everything about the Narrow */
+.slider_narrow {
+    background-color: transparent;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    margin-left: 5%;
+    align-items: center;
+}
+
+/* Text or future icon of narrow */
+.slider_narrow .label_narrow {
+    background-color: transparent;
+    text-align:center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+}
+
+/* Narrow slider */
+.slider_narrow .input_range_narrow {
+    background-color: transparent;
+    text-align: center;
+    width: 70%;
+}
+
+/* Narrow slider */
+.slider_narrow .value_narrow {
+    background-color: transparent;
+    text-align: center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+}
+
+/* This is for a future button of mute
+.slider_narrow .switch_narrow {
+    background-color: transparent;
+    border: transparent;
+    text-align: center;
+    width: 20%;
+    margin-top: 15%;
+
+}*/
+
+.button_narrow {
+    background-color: transparent;
+    height: 20px;
+    width: 90%;
+    display: flex;
+    margin-left: 20%;
+    margin-bottom:5%;
+
+    align-items: center;
+}
+
+.button_narrow500 {
+    background-color: #d38157;
+    text-align: center;
+    width: 25%;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+    padding: 7px;
+}
+
+.button_narrow1k {
+    background-color: #d38157;
+    text-align: center;
+    width: 25%;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+    margin-left: 2%;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+    padding: 7px;
+}
+
+.button_narrow2k {
+    background-color: #d38157;
+    text-align: center;
+    width: 25%;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+    margin-left: 2%;
+    padding: 7px;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+}
+
+/*********************/
+/*  slider_tonegen   */
+/*********************/
+
+.slider_tonegen {
+    background-color: transparent;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    margin-left: 4%;
+    margin-top: 1%;
+    align-items: center;
+}
+
+.slider_tonegen_freq {
+    background-color: transparent;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    margin-left: 20%;
+    margin-bottom: 4%;
+    align-items: center;
+}
+
+.slider_tonegen .icon_tonegen {
+    background-color: transparent;
+    text-align:center;
+    width: 15%;
+    margin-top: 15%;
+}
+
+.slider_tonegen .input_range_tonegen {
+    background-color: transparent;
+    text-align: center;
+    width: 70%;
+    margin-left: 2%;
+}
+
+.slider_tonegen .value_tonegen {
+    background-color: transparent;
+    text-align: center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+}
+
+.slider_tonegen_freq .freq_input_range_tonegen {
+    background-color: transparent;
+    text-align: center;
+    width: 70%;
+    margin-left: 2%;
+}
+
+/* Properties fo the value of frecuency */
+.slider_tonegen_freq .value_tonegen_freq {
+    background-color: transparent;
+    text-align: center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+}
+
+/* Properties fo the "Hz"" label of frecuency */
+.slider_tonegen_freq .value_tonegen_freq_Hz {  
+    background-color: transparent;
+    text-align: center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+    margin-left: -2%
+}
+
+/* This is for a future button of mute
+.slider_tonegen .switch_tonegen {
+    background-color: transparent;
+    border: transparent;
+    text-align: center;
+    width: 20%;
+    margin-top: 12%;
+}*/
+
+/*********************/
+/*   slider_rain     */
+/*********************/
+
+.slider_rain {
+    background-color: transparent;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    margin-left: 4%;
+    align-items: center;
+}
+
+.slider_rain .icon_rain {
+    background-color: transparent;
+    text-align:center;
+    width: 15%;
+    margin-top: 5%;
+}
+
+.slider_rain .input_range_rain {
+    background-color: transparent;
+    text-align: center;
+    width: 70%;
+    margin-left: 2%;
+}
+
+.slider_rain .value_rain {
+    background-color: transparent;
+    text-align: center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+}
+
+/* This is for a future button of mute
+.slider_rain .switch_rain {
+    background-color: transparent;
+    border: transparent;
+    text-align: center;
+    width: 20%;
+}*/
+
+/*********************/
+/* slider_heavyRain  */
+/*********************/
+
+.slider_heavyRain {
+    background-color: transparent;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    margin-left: 4%;
+    align-items: center;
+}
+
+.slider_heavyRain .iconHeavyRain {
+    background-color: transparent;
+    text-align:center;
+    width: 15%;
+    margin-top: 5%;
+}
+
+.slider_heavyRain .input_range_heavyRain {
+    background-color: transparent;
+    text-align: center;
+    width: 70%;
+    margin-left: 2%;
+}
+
+.slider_heavyRain .value_heavyRain {
+    background-color: transparent;
+    text-align: center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+}
+
+/* This is for a future button of mute
+.slider_heavyRain .switch_heavyRain {
+    background-color: transparent;
+    border: transparent;
+    text-align: center;
+    width: 20%;
+}*/
+
+/*********************/
+/*   slider_water    */
+/*********************/
+
+.slider_water {
+    background-color: transparent;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    margin-left: 4%;
+    align-items: center;
+}
+
+
+.slider_water .iconWater {
+    background-color: transparent;
+    text-align:center;
+    width: 10%;
+    margin-top: 3%;
+}
+
+.slider_water .input_range_water {
+    background-color: transparent;
+    text-align: center;
+    width: 70%;
+    margin-left: 2%;
+}
+
+.slider_water .value_water {
+    background-color: transparent;
+    text-align: center;
+    width: 15%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+}
+/* This is for a future button of mute
+.slider_water .switch_water {
+    background-color: transparent;
+    border: transparent;
+    text-align: center;
+    width: 20%;
+}*/
+
+/*********************/
 /*   control play    */
 /*********************/
 
@@ -66,7 +424,7 @@ This is for a future button of mute
 /* Everything about the play button*/
     border-top: 40px solid transparent;
     border-bottom: 40px solid transparent;
-    border-left: 70px solid #d38157;
+    border-left: 70px solid #7f2b51;
     border-right: 40px solid transparent;
     margin: 5px auto 50px auto;
     position: relative;
@@ -76,7 +434,7 @@ This is for a future button of mute
     -moz-transition: all 0.3s;
     left: 30px; /* change this if you want to translate it on the x-axis  */
     background-color: #f0c27b ;
-    transform: scale(0.6); /* change this if you want to scale it  */  
+    transform: scale(0.6); /* change this if you want to scale it  */
 }
     
 .control .play:before {
@@ -88,7 +446,7 @@ This is for a future button of mute
     bottom: -75px;
     right: -15px;
     border-radius: 50%;
-    border: 10px solid #d38157;
+    border: 10px solid #7f2b51;
     z-index: 2;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -122,10 +480,10 @@ This is for a future button of mute
     opacity: 1;
     width: 50px;
     height: 80px;
-    background: #d38157;
+    background: #7f2b51;
     position: absolute;
-    right: 23px;
+    right: 30px;
     top: -40px;
-    border-left: 20px solid #d38157;
-    box-shadow: inset 30px 0 0 0 #f0c27b;
+    border-left: 20px solid #7f2b51;
+    box-shadow: inset 10px 0 0 0 #f0c27b;
 }
