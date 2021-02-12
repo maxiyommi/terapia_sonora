@@ -12,7 +12,6 @@ Table Of Contents:
 - slider_tonegen
 - slider_rain
 - slider_heavyRain
-
 - control play
 ******************************************/
 
@@ -424,7 +423,7 @@ This is for a future button of mute
 /* Everything about the play button*/
     border-top: 40px solid transparent;
     border-bottom: 40px solid transparent;
-    border-left: 70px solid #7f2b51;
+    border-left: 70px solid #d38157;
     border-right: 40px solid transparent;
     margin: 5px auto 50px auto;
     position: relative;
@@ -446,7 +445,7 @@ This is for a future button of mute
     bottom: -75px;
     right: -15px;
     border-radius: 50%;
-    border: 10px solid #7f2b51;
+    border: 10px solid #d38157;
     z-index: 2;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -480,10 +479,10 @@ This is for a future button of mute
     opacity: 1;
     width: 50px;
     height: 80px;
-    background: #7f2b51;
+    background: #d38157;
     position: absolute;
-    right: 30px;
+    right: 35px;
     top: -40px;
-    border-left: 20px solid #7f2b51;
+    border-left: 20px solid #d38157;
     box-shadow: inset 10px 0 0 0 #f0c27b;
 }

@@ -27,7 +27,7 @@
 - [ ] pasar una version a flask, para darle a Fabri.
 - [ ] trabajar con el dashboard de perfiles.
 
-## Fecha 09 de Febrero 2021
+## Fecha 11 de Febrero 2021
 - [x] Limpieza de .js.
 - [x] Limpiar .css
 - [ ] Agregar el www, en el CNAME
@@ -38,9 +38,9 @@ Source Map URL: bootstrap.css.map
 - [ ] cambiar color de arrow 
 - [ ] cambiar los colores de bonotes narrow como "conocé más!"
 - [ ] ver iconos de mixer
+- [ ] se nota mucho el corte en el audio de tormenta fuerte. (yo pienso una tormenta fuerte mas como mas caudal de agua)
 
-branch master-prueba --> para trabajar la adecuacion del mixer
+## Fecha 12 de Febrero 2021
+- [ ] chequear como se ve en android y IOS
 
-//CONTINUAR//
-- UNIFICAR CSS DE MIXER 
-- UNIFICAR MIXER.JS
+

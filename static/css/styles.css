@@ -420,9 +420,7 @@ h6 {
 	position: relative;
 	padding-top: 7rem;
 	padding-bottom: 8rem;
-	/*
-	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.527)), url('../images/header-background.png') center center no-repeat;
-	*/
+	/* background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.527)), url('../images/header-background.png') center center no-repeat; */
 	background: url('../media/images/header-background.png') center center no-repeat;
 	background-size: cover;
 }
@@ -1191,7 +1189,7 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header {
-		text-align: center;
+		text-align: left;
 	}
 
 	.header .text-container {
@@ -1392,12 +1390,12 @@ a:hover.back-to-top {
 	/* Header */
 	.header {
 		overflow: hidden;
-		padding-top: 6rem;
+		padding-top: 5rem;
 		padding-bottom: 6rem;
 	}
 
 	.header .text-container {
-		margin-top: 1.5rem;
+		margin-top: 0.5rem;
 		margin-right: 0.5rem;
 		letter-spacing: 0px;
 	}
