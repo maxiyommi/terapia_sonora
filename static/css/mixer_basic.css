@@ -105,7 +105,7 @@ input[type=range]::-ms-fill-lower {
 }
 
 input[type=range]::-ms-fill-upper {
-	background: rgba(211, 129, 87, 0.9);
+	background: #d38157;
 	border: 0;
 }
 
