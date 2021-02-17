@@ -12,6 +12,7 @@ Table Of Contents:
 - slider_tonegen
 - slider_rain
 - slider_heavyRain
+
 - control play
 ******************************************/
 
@@ -24,11 +25,11 @@ Table Of Contents:
     background-color: transparent;
     height: 80px;
     width: 100%;
+    display: flex;
     margin-left: 5%;
     margin-top: 1%;
     margin-bottom: 1%;
     align-items: center;
-    display: flex;
 }
 
 .slider_pink .label_pink {
@@ -42,17 +43,37 @@ Table Of Contents:
 .slider_pink .input_range_pink {
     background-color: transparent;
     text-align: center;
-    width: 70%;
+    width: 60%;
     height: 9px;
 }
 
 .slider_pink .value_pink {
     background-color: transparent;
     text-align: center;
-    width: 15%;
+    width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
     color:#1d0b38;
 }
+
+.slider_pink .infinity_pink {
+	position: relative;
+    width: 10%;
+	height: 8%;
+	scale:1.6;
+
+  }
+
+.slider_pink .value_pink_dbfs {
+    background-color: transparent;
+    position:relative;
+    text-align: center;
+    width: 8%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#292430;
+  
+  
+  
+  }
 /*
 This is for a future button of mute
 .slider_pink .switch_pink {
@@ -88,15 +109,35 @@ This is for a future button of mute
 .slider_white .input_range_white {
     background-color: transparent;
     text-align: center;
-    width: 70%;
+    width: 60%;
 }
 
 .slider_white .value_white {
     background-color: transparent;
     text-align: center;
-    width: 15%;
+    width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
     color:#1d0b38;
+}
+
+.slider_white .infinity_white {
+	position: relative;
+  width: 10%;
+	height: 8%;
+	scale:1.6;
+
+  }
+
+.slider_white .value_white_dbfs {
+  background-color: transparent;
+  position:relative;
+  text-align: center;
+  width: 8%;
+  font: 600 1rem/1rem 'Jost', sans-serif;
+  color:#292430;
+
+
+
 }
 /*
 This is for a future button of mute
@@ -121,7 +162,10 @@ This is for a future button of mute
     align-items: center;
 }
 
-/* Text or future icon of narrow */
+
+/*
+Text or future icon of narrow
+*/
 .slider_narrow .label_narrow {
     background-color: transparent;
     text-align:center;
@@ -130,23 +174,46 @@ This is for a future button of mute
     color:#1d0b38;
 }
 
-/* Narrow slider */
+
+/*
+Narrow slider
+*/
 .slider_narrow .input_range_narrow {
     background-color: transparent;
     text-align: center;
-    width: 70%;
+    width: 60%;
 }
 
-/* Narrow slider */
 .slider_narrow .value_narrow {
     background-color: transparent;
     text-align: center;
-    width: 15%;
+    width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
     color:#1d0b38;
 }
 
-/* This is for a future button of mute
+.slider_narrow .infinity_narrow {
+	position: relative;
+    width: 10%;
+	height: 8%;
+	scale:1.6;
+
+  }
+
+.slider_narrow .value_narrow_dbfs {
+    background-color: transparent;
+    position:relative;
+    text-align: center;
+    width: 8%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    color:#292430;
+  
+  
+  
+  }
+
+/*
+This is for a future button of mute
 .slider_narrow .switch_narrow {
     background-color: transparent;
     border: transparent;
@@ -156,34 +223,57 @@ This is for a future button of mute
 
 }*/
 
-.button_narrow {
+.button_narrow1 {
+    /*
+    Primera fila de botones
+    */
     background-color: transparent;
     height: 20px;
-    width: 90%;
+    width: 100%;
     display: flex;
-    margin-left: 20%;
-    margin-bottom:5%;
-
+    margin-left: 9%;
+    margin-bottom: 5%;
     align-items: center;
 }
 
-.button_narrow500 {
+
+
+.button_narrow1 .button_narrow250 {
     background-color: #d38157;
     text-align: center;
-    width: 25%;
-    font: 500 1rem/1rem 'Jost', sans-serif;
+    width: 20%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
     color:#1d0b38;
     cursor: pointer;
     border: #1d0b38;
     border-radius: 12px;
+    margin-left: 2%;
     padding: 7px;
 }
 
-.button_narrow1k {
+
+.button_narrow1 .button_narrow500 {
+    /*
+    Este es el predefinido, por eso se cambia el color del texto y del fondo
+    con respecto al resto
+    */
+    background-color: #1d0b38;
+    text-align: center;
+    width: 20%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    color:#d38157;
+    margin-left: 2%;
+    cursor: pointer;
+    border: #d38157;
+    border-radius: 12px;
+    padding: 7px;
+}
+
+.button_narrow1 .button_narrow1k {
     background-color: #d38157;
     text-align: center;
-    width: 25%;
-    font: 500 1rem/1rem 'Jost', sans-serif;
+    width: 20%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
     color:#1d0b38;
     margin-left: 2%;
     cursor: pointer;
@@ -192,11 +282,118 @@ This is for a future button of mute
     padding: 7px;
 }
 
-.button_narrow2k {
+
+.button_narrow1 .button_narrow2k {
     background-color: #d38157;
     text-align: center;
-    width: 25%;
-    font: 500 1rem/1rem 'Jost', sans-serif;
+    width: 20%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+    margin-left: 2%;
+    padding: 7px;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+}
+
+
+.button_narrow2 {
+    /*
+    Segunda fila de botones
+    */
+    background-color: transparent;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    margin-left: 9%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+
+.button_narrow2 .button_narrow3k {
+    background-color: #d38157;
+    text-align: center;
+    width: 20%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+    margin-left: 2%;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+    padding: 7px;
+}
+
+.button_narrow2 .button_narrow4k {
+    background-color: #d38157;
+    text-align: center;
+    width: 20%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+    margin-left: 2%;
+    padding: 7px;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+}
+
+.button_narrow2 .button_narrow6k {
+    background-color: #d38157;
+    text-align: center;
+    width: 20%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+    margin-left: 2%;
+    padding: 7px;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+}
+
+.button_narrow2 .button_narrow8k {
+    background-color: #d38157;
+    text-align: center;
+    width: 20%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+    margin-left: 2%;
+    padding: 7px;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+}
+
+.button_narrow3 {
+    /*
+    Tercera fila de botones
+    */
+    background-color: transparent;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    margin-left: 9%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.button_narrow3 .button_narrow10k {
+    background-color: #d38157;
+    text-align: center;
+    width: 20%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    color:#1d0b38;
+    margin-left: 24%;
+    padding: 7px;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+}
+
+.button_narrow3 .button_narrow12k {
+    background-color: #d38157;
+    text-align: center;
+    width: 20%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
     color:#1d0b38;
     margin-left: 2%;
     padding: 7px;
@@ -219,56 +416,82 @@ This is for a future button of mute
     align-items: center;
 }
 
-.slider_tonegen_freq {
-    background-color: transparent;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    margin-left: 20%;
-    margin-bottom: 4%;
-    align-items: center;
-}
 
 .slider_tonegen .icon_tonegen {
     background-color: transparent;
     text-align:center;
     width: 15%;
-    margin-top: 15%;
+    color:#1d0b38;
+
+
 }
 
 .slider_tonegen .input_range_tonegen {
     background-color: transparent;
     text-align: center;
-    width: 70%;
-    margin-left: 2%;
+    width: 60%;
 }
 
 .slider_tonegen .value_tonegen {
     background-color: transparent;
     text-align: center;
-    width: 15%;
+    width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
     color:#1d0b38;
 }
+
+
+.slider_tonegen .infinity_tonegen {
+	position: relative;
+    width: 10%;
+	height: 8%;
+	scale:1.6;
+
+  }
+
+.slider_tonegen .value_tonegen_dbfs {
+  background-color: transparent;
+  position: relative;
+  text-align: center;
+  width: 8%;
+  font: 600 1rem/1rem 'Jost', sans-serif;
+  color:#292430;
+
+
+
+}
+.slider_tonegen_freq {
+    background-color: transparent;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    margin-left: 25%;
+    margin-bottom: 4%;
+    align-items: center;
+}
+
 
 .slider_tonegen_freq .freq_input_range_tonegen {
     background-color: transparent;
     text-align: center;
-    width: 70%;
-    margin-left: 2%;
+    width: 55%;
 }
 
-/* Properties fo the value of frecuency */
+
 .slider_tonegen_freq .value_tonegen_freq {
+    /* 
+    Properties fo the value of frecuency
+    */
     background-color: transparent;
     text-align: center;
     width: 15%;
     font: 600 1rem/1rem 'Jost', sans-serif;
     color:#1d0b38;
 }
-
-/* Properties fo the "Hz"" label of frecuency */
-.slider_tonegen_freq .value_tonegen_freq_Hz {  
+.slider_tonegen_freq .value_tonegen_freq_Hz {
+    /* 
+    Properties fo the "Hz"" label of frecuency
+    */
     background-color: transparent;
     text-align: center;
     width: 15%;
@@ -277,7 +500,8 @@ This is for a future button of mute
     margin-left: -2%
 }
 
-/* This is for a future button of mute
+/*
+This is for a future button of mute
 .slider_tonegen .switch_tonegen {
     background-color: transparent;
     border: transparent;
@@ -285,6 +509,7 @@ This is for a future button of mute
     width: 20%;
     margin-top: 12%;
 }*/
+
 
 /*********************/
 /*   slider_rain     */
@@ -309,17 +534,44 @@ This is for a future button of mute
 .slider_rain .input_range_rain {
     background-color: transparent;
     text-align: center;
-    width: 70%;
-    margin-left: 2%;
+    width: 60%;
 }
 
 .slider_rain .value_rain {
     background-color: transparent;
     text-align: center;
-    width: 15%;
+    width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
     color:#1d0b38;
 }
+
+.slider_rain .infinity_rain {
+	position: relative;
+  width: 10%;
+	height: 8%;
+	scale:1.6;
+}
+
+.slider_rain .value_rain_dbfs {
+  background-color: transparent;
+  position:relative;
+  text-align: center;
+  width: 8%;
+  font: 600 1rem/1rem 'Jost', sans-serif;
+  color:#292430;
+}
+
+
+
+/*
+This is for a future button of mute
+.slider_rain .switch_rain {
+    background-color: transparent;
+    border: transparent;
+    text-align: center;
+    width: 20%;
+}*/
+
 
 /* This is for a future button of mute
 .slider_rain .switch_rain {
@@ -332,13 +584,12 @@ This is for a future button of mute
 /*********************/
 /* slider_heavyRain  */
 /*********************/
-
 .slider_heavyRain {
     background-color: transparent;
     height: 80px;
     width: 100%;
     display: flex;
-    margin-left: 4%;
+    margin-left: 3%;
     align-items: center;
 }
 
@@ -352,25 +603,44 @@ This is for a future button of mute
 .slider_heavyRain .input_range_heavyRain {
     background-color: transparent;
     text-align: center;
-    width: 70%;
+    width: 60%;
     margin-left: 2%;
 }
 
 .slider_heavyRain .value_heavyRain {
     background-color: transparent;
     text-align: center;
-    width: 15%;
+    width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
     color:#1d0b38;
 }
 
-/* This is for a future button of mute
+.slider_heavyRain .infinity_heavyRain {
+	position: relative;
+    width: 10%;
+	height: 8%;
+	scale:1.6;
+
+  }
+
+.slider_heavyRain .value_heavyRain_dbfs {
+  background-color: transparent;
+  position:relative;
+  text-align: center;
+  width: 8%;
+  font: 600 1rem/1rem 'Jost', sans-serif;
+  color:#292430;
+
+
+
+}
+/*
 .slider_heavyRain .switch_heavyRain {
     background-color: transparent;
     border: transparent;
     text-align: center;
     width: 20%;
-}*/
+} */
 
 /*********************/
 /*   slider_water    */
@@ -381,7 +651,7 @@ This is for a future button of mute
     height: 80px;
     width: 100%;
     display: flex;
-    margin-left: 4%;
+    margin-left: 3%;
     align-items: center;
 }
 
@@ -389,31 +659,53 @@ This is for a future button of mute
 .slider_water .iconWater {
     background-color: transparent;
     text-align:center;
-    width: 10%;
+    width: 15%;
     margin-top: 3%;
 }
 
 .slider_water .input_range_water {
     background-color: transparent;
     text-align: center;
-    width: 70%;
+    width: 60%;
     margin-left: 2%;
 }
 
 .slider_water .value_water {
     background-color: transparent;
     text-align: center;
-    width: 15%;
+    width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
     color:#1d0b38;
 }
-/* This is for a future button of mute
+
+.slider_water .infinity_water {
+	position: relative;
+  width: 10%;
+	height: 8%;
+	scale:1.6;
+
+  }
+
+.slider_water .value_water_dbfs {
+  background-color: transparent;
+  position:relative;
+  text-align: center;
+  width: 8%;
+  font: 600 1rem/1rem 'Jost', sans-serif;
+  color:#292430;
+
+
+
+}
+/*
+This is for a future button of mute
 .slider_water .switch_water {
     background-color: transparent;
     border: transparent;
     text-align: center;
     width: 20%;
 }*/
+
 
 /*********************/
 /*   control play    */
@@ -423,7 +715,7 @@ This is for a future button of mute
 /* Everything about the play button*/
     border-top: 40px solid transparent;
     border-bottom: 40px solid transparent;
-    border-left: 70px solid #d38157;
+    border-left: 70px solid #7f2b51;
     border-right: 40px solid transparent;
     margin: 5px auto 50px auto;
     position: relative;
@@ -445,7 +737,7 @@ This is for a future button of mute
     bottom: -75px;
     right: -15px;
     border-radius: 50%;
-    border: 10px solid #d38157;
+    border: 10px solid #7f2b51;
     z-index: 2;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -479,10 +771,10 @@ This is for a future button of mute
     opacity: 1;
     width: 50px;
     height: 80px;
-    background: #d38157;
+    background: #7f2b51;
     position: absolute;
-    right: 35px;
+    right: 30px;
     top: -40px;
-    border-left: 20px solid #d38157;
+    border-left: 20px solid #7f2b51;
     box-shadow: inset 10px 0 0 0 #f0c27b;
 }
