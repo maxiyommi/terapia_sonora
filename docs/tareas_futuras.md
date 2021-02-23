@@ -2,6 +2,7 @@
 En este documento se van definiendo las tareas futuras para proponer al cliente.
 
 - [ ] Indexado de la web en google.
+- [ ] agregar un cronometro.
 - [ ] Agregar un apartado "Nosotros" con la info de la carpera `/docs`.
 - [ ] ver el tamaño de los componentes mixer, en celulares. Sobre todo el tamaño de las letras.
 - [ ] Reemplazar lorem ipsum por contenido enviado por Magali.
