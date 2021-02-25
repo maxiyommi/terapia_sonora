@@ -38,10 +38,10 @@ La principal característica que tiene este proyecto, es una consola que mezcla 
 Para esta tarea su uitliza el framework [Tone.js](https://tonejs.github.io/). La documentacion del mixer esta en el siguiente [archivo](README_mixer.md).
 
 ## Dominio
-tuterapiasonora.com.ar adquirido en [nic.ar](https://nic.ar/es/ayuda/instructivos/registro-de-dominio). 
+www.tuterapiasonora.com.ar adquirido en [nic.ar](https://nic.ar/es/ayuda/instructivos/registro-de-dominio). 
 
 ## Hosting y DNS
-La web esta hosteada en [GitHub Page](https://pages.github.com/) y usando [namecheap](https://www.namecheap.com) para el DNS, que [redireccione la web](https://curiosidadesespaciales.ar/2020/09/21/Tutorial-blog-2/).
+La web esta hosteada en [GitHub Page](https://pages.github.com/), usando [namecheap](https://www.namecheap.com) para el DNS, que [redirecciona la web](https://curiosidadesespaciales.ar/2020/09/21/Tutorial-blog-2/).
 
 ## Testing
 La solución a simular browser, SO, entre otros: https://live.browserstack.com.
