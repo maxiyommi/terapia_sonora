@@ -47,8 +47,7 @@ La web esta hosteada en [GitHub Page](https://pages.github.com/), usando [namech
 La solución a simular browser, SO, entre otros: https://live.browserstack.com.
 
 ## Indexado en buscador
-Para indexar la web se procedió a su verificacion utilizando [Google Search Console](https://search.google.com), siguiendo los paso del siguiente [documento]
-(https://yossieliaz.medium.com/how-to-make-your-github-pages-website-searchable-by-google-c6f481ca3a19)
+Para indexar la web se procedió a su verificacion utilizando [Google Search Console](https://search.google.com), siguiendo los paso del siguiente [documento](https://yossieliaz.medium.com/how-to-make-your-github-pages-website-searchable-by-google-c6f481ca3a19)
 
 ## Equipo de desarrollo
 El proyecto fue realizado por el siguiente equipo de trabajo:
