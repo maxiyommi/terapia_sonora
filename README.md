@@ -1,4 +1,7 @@
+![](/static/media/images/logo.png)
+
 # Landing page Sonora
+
 [SONORA](https://tuterapiasonora.com.ar/), te propone contar con las herramientas necesarias para realizar una Terapia Sonora para el tratamiento de síntomas como son los Acúfenos /Tinnitus, la Hiperacusia y como complemento de ayuda en algunas Hipoacusias de una manera accesible, amigable y personal.
 
 Este repositorio documenta todos los elementos del proyecto.

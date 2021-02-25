@@ -22,3 +22,5 @@ Source Map URL: bootstrap.css.map
 - [ ] cambiar los colores de bonotes narrow como "conocé más!"
 - [ ] ver iconos de mixer.
 - [ ] Que el boton de play tenga un hover que diga reproducir.
+
+Se cobró $50000 ($38000 maxi, $5000 fabri, $7000 santiago), se invirtieron mas de 50 horas.
