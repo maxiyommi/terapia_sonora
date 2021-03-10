@@ -13,7 +13,8 @@ Table Of Contents:
 - slider_rain
 - slider_heavyRain
 
-- control play
+- control
+- lightbox timer
 ******************************************/
 
 
@@ -26,7 +27,7 @@ Table Of Contents:
     height: 80px;
     width: 100%;
     display: flex;
-    margin-left: 5%;
+    margin-left: 4%;
     margin-top: 1%;
     margin-bottom: 1%;
     align-items: center;
@@ -37,14 +38,16 @@ Table Of Contents:
     text-align:center;
     width: 15%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
+    margin-left:2.5%;
+    margin-right:2.5%;
 }
 
 .slider_pink .input_range_pink {
     background-color: transparent;
     text-align: center;
-    width: 60%;
-    height: 9px;
+    width: 55%;
 }
 
 .slider_pink .value_pink {
@@ -52,27 +55,24 @@ Table Of Contents:
     text-align: center;
     width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
 }
 
 .slider_pink .infinity_pink {
 	position: relative;
     width: 10%;
-	height: 8%;
-	scale:1.6;
-
+	height: 12%;
   }
 
 .slider_pink .value_pink_dbfs {
     background-color: transparent;
     position:relative;
     text-align: center;
-    width: 8%;
+    width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#292430;
-  
-  
-  
   }
 /*
 This is for a future button of mute
@@ -92,7 +92,7 @@ This is for a future button of mute
     height: 80px;
     width: 100%;
     display: flex;
-    margin-left: 5%;
+    margin-left: 4%;
     margin-top: 1%;
     margin-bottom: 1%;
     align-items: center;
@@ -103,13 +103,17 @@ This is for a future button of mute
     text-align:center;
     width: 15%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
+    margin-left:2.5%;
+    margin-right:2.5%;
 }
 
 .slider_white .input_range_white {
     background-color: transparent;
     text-align: center;
-    width: 60%;
+    width: 55%;
+    
 }
 
 .slider_white .value_white {
@@ -117,14 +121,14 @@ This is for a future button of mute
     text-align: center;
     width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
 }
 
 .slider_white .infinity_white {
 	position: relative;
-  width: 10%;
-	height: 8%;
-	scale:1.6;
+    width: 10%;
+    height: 12%;
 
   }
 
@@ -134,6 +138,7 @@ This is for a future button of mute
   text-align: center;
   width: 8%;
   font: 600 1rem/1rem 'Jost', sans-serif;
+  font-size: 85%;
   color:#292430;
 
 
@@ -158,7 +163,7 @@ This is for a future button of mute
     height: 80px;
     width: 100%;
     display: flex;
-    margin-left: 5%;
+    margin-left: 4%;
     align-items: center;
 }
 
@@ -171,7 +176,10 @@ Text or future icon of narrow
     text-align:center;
     width: 15%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
+    margin-left:2.5%;
+    margin-right:2.5%;
 }
 
 
@@ -181,7 +189,7 @@ Narrow slider
 .slider_narrow .input_range_narrow {
     background-color: transparent;
     text-align: center;
-    width: 60%;
+    width: 55%;
 }
 
 .slider_narrow .value_narrow {
@@ -189,14 +197,14 @@ Narrow slider
     text-align: center;
     width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
 }
 
 .slider_narrow .infinity_narrow {
 	position: relative;
     width: 10%;
-	height: 8%;
-	scale:1.6;
+	height: 12%;
 
   }
 
@@ -206,6 +214,7 @@ Narrow slider
     text-align: center;
     width: 8%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#292430;
   
   
@@ -242,7 +251,8 @@ This is for a future button of mute
     background-color: #d38157;
     text-align: center;
     width: 20%;
-    font: 400 1rem/1rem 'Jost', sans-serif;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
     cursor: pointer;
     border: #1d0b38;
@@ -260,7 +270,8 @@ This is for a future button of mute
     background-color: #1d0b38;
     text-align: center;
     width: 20%;
-    font: 400 1rem/1rem 'Jost', sans-serif;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#d38157;
     margin-left: 2%;
     cursor: pointer;
@@ -273,7 +284,8 @@ This is for a future button of mute
     background-color: #d38157;
     text-align: center;
     width: 20%;
-    font: 400 1rem/1rem 'Jost', sans-serif;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
     margin-left: 2%;
     cursor: pointer;
@@ -287,7 +299,8 @@ This is for a future button of mute
     background-color: #d38157;
     text-align: center;
     width: 20%;
-    font: 400 1rem/1rem 'Jost', sans-serif;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
     margin-left: 2%;
     padding: 7px;
@@ -315,7 +328,8 @@ This is for a future button of mute
     background-color: #d38157;
     text-align: center;
     width: 20%;
-    font: 400 1rem/1rem 'Jost', sans-serif;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
     margin-left: 2%;
     cursor: pointer;
@@ -328,7 +342,8 @@ This is for a future button of mute
     background-color: #d38157;
     text-align: center;
     width: 20%;
-    font: 400 1rem/1rem 'Jost', sans-serif;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
     margin-left: 2%;
     padding: 7px;
@@ -341,7 +356,8 @@ This is for a future button of mute
     background-color: #d38157;
     text-align: center;
     width: 20%;
-    font: 400 1rem/1rem 'Jost', sans-serif;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
     margin-left: 2%;
     padding: 7px;
@@ -354,7 +370,8 @@ This is for a future button of mute
     background-color: #d38157;
     text-align: center;
     width: 20%;
-    font: 400 1rem/1rem 'Jost', sans-serif;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
     margin-left: 2%;
     padding: 7px;
@@ -380,7 +397,8 @@ This is for a future button of mute
     background-color: #d38157;
     text-align: center;
     width: 20%;
-    font: 400 1rem/1rem 'Jost', sans-serif;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
     margin-left: 24%;
     padding: 7px;
@@ -393,7 +411,8 @@ This is for a future button of mute
     background-color: #d38157;
     text-align: center;
     width: 20%;
-    font: 400 1rem/1rem 'Jost', sans-serif;
+    font: 500 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
     margin-left: 2%;
     padding: 7px;
@@ -420,14 +439,15 @@ This is for a future button of mute
 .slider_tonegen .icon_tonegen {
     background-color: transparent;
     text-align:center;
-    width: 15%;
+    width: 20%;
+    height: 60%;
     color:#1d0b38;
 }
 
 .slider_tonegen .input_range_tonegen {
     background-color: transparent;
     text-align: center;
-    width: 60%;
+    width: 55%;
 }
 
 .slider_tonegen .value_tonegen {
@@ -435,6 +455,7 @@ This is for a future button of mute
     text-align: center;
     width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
 }
 
@@ -442,8 +463,7 @@ This is for a future button of mute
 .slider_tonegen .infinity_tonegen {
 	position: relative;
     width: 10%;
-	height: 8%;
-	scale:1.6;
+	height: 12%;
 
   }
 
@@ -453,7 +473,9 @@ This is for a future button of mute
   text-align: center;
   width: 8%;
   font: 600 1rem/1rem 'Jost', sans-serif;
+  font-size: 85%;
   color:#292430;
+ 
 
 
 
@@ -461,18 +483,78 @@ This is for a future button of mute
 .slider_tonegen_freq {
     background-color: transparent;
     height: 30px;
-    width: 100%;
+    width: 95%;
     display: flex;
-    margin-left: 25%;
     margin-bottom: 4%;
     align-items: center;
+    margin-left: 30%;
 }
 
 
 .slider_tonegen_freq .freq_input_range_tonegen {
     background-color: transparent;
     text-align: center;
-    width: 55%;
+    width: 30%;
+}
+
+@media (min-width: 992px) {
+    .slider_tonegen_freq .value_tonegen_freq {
+        /* 
+        Properties fo the value of frecuency
+        */
+        background-color: transparent;
+        text-align: center;
+        width: 15%;
+        font: 600 1rem/1rem 'Jost', sans-serif;
+        font-size: 85%;
+        color:#1d0b38;
+    }
+    .slider_tonegen_freq .value_tonegen_freq_Hz {
+        /* 
+        Properties fo the "Hz"" label of frecuency
+        */
+        background-color: transparent;
+        text-align: center;
+        width: 15%;
+        font: 600 1rem/1rem 'Jost', sans-serif;
+        font-size: 85%;
+        color:#1d0b38;
+        margin-left:-5%;
+
+        
+    }
+
+}
+
+
+@media (max-width: 992px) {
+    .slider_tonegen_freq .value_tonegen_freq {
+        /* 
+        Properties fo the value of frecuency
+        */
+        background-color: transparent;
+        text-align: center;
+        width: 15%;
+        font: 500 1rem/1rem 'Jost', sans-serif;
+        font-size: 75%;
+        color:#1d0b38;
+        margin-left: 4%;
+    }
+    .slider_tonegen_freq .value_tonegen_freq_Hz {
+        /* 
+        Properties fo the "Hz"" label of frecuency
+        */
+        background-color: transparent;
+        text-align: center;
+        width: 15%;
+        font: 500 1rem/1rem 'Jost', sans-serif;
+        font-size: 75%;
+        color:#1d0b38;
+        margin-left:4%;
+
+        
+    }
+
 }
 
 
@@ -484,7 +566,9 @@ This is for a future button of mute
     text-align: center;
     width: 15%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
+    margin-left: 5%;
 }
 .slider_tonegen_freq .value_tonegen_freq_Hz {
     /* 
@@ -494,8 +578,10 @@ This is for a future button of mute
     text-align: center;
     width: 15%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
-    margin-left: -2%
+    margin-right: 2%;
+    
 }
 
 /*
@@ -517,22 +603,23 @@ This is for a future button of mute
     background-color: transparent;
     height: 80px;
     width: 100%;
-    display: flex;
     margin-left: 4%;
+    margin-top: 1%;
+    display: flex;
     align-items: center;
 }
 
 .slider_rain .icon_rain {
     background-color: transparent;
     text-align:center;
-    width: 15%;
-    margin-top: 5%;
+    width: 20%;
+    height: 60%;
 }
 
 .slider_rain .input_range_rain {
     background-color: transparent;
     text-align: center;
-    width: 60%;
+    width: 55%;
 }
 
 .slider_rain .value_rain {
@@ -540,14 +627,14 @@ This is for a future button of mute
     text-align: center;
     width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
 }
 
 .slider_rain .infinity_rain {
 	position: relative;
-  width: 10%;
-	height: 8%;
-	scale:1.6;
+    width: 10%;
+	height: 12%;
 }
 
 .slider_rain .value_rain_dbfs {
@@ -556,6 +643,7 @@ This is for a future button of mute
   text-align: center;
   width: 8%;
   font: 600 1rem/1rem 'Jost', sans-serif;
+  font-size: 85%;
   color:#292430;
 }
 
@@ -582,27 +670,30 @@ This is for a future button of mute
 /*********************/
 /* slider_heavyRain  */
 /*********************/
+
 .slider_heavyRain {
     background-color: transparent;
     height: 80px;
     width: 100%;
     display: flex;
-    margin-left: 3%;
+    margin-left: 4%;
+    margin-top: 1%;
     align-items: center;
+
 }
 
-.slider_heavyRain .iconHeavyRain {
+.slider_heavyRain .icon_heavyRain {
     background-color: transparent;
-    text-align:center;
-    width: 15%;
-    margin-top: 5%;
+    text-align: center;
+    width: 20%;
+    height: 60%;
+
 }
 
 .slider_heavyRain .input_range_heavyRain {
     background-color: transparent;
     text-align: center;
-    width: 60%;
-    margin-left: 2%;
+    width: 55%;
 }
 
 .slider_heavyRain .value_heavyRain {
@@ -610,14 +701,14 @@ This is for a future button of mute
     text-align: center;
     width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
 }
 
 .slider_heavyRain .infinity_heavyRain {
 	position: relative;
     width: 10%;
-	height: 8%;
-	scale:1.6;
+	height: 12%;
 
   }
 
@@ -627,10 +718,8 @@ This is for a future button of mute
   text-align: center;
   width: 8%;
   font: 600 1rem/1rem 'Jost', sans-serif;
+  font-size: 85%;
   color:#292430;
-
-
-
 }
 /*
 .slider_heavyRain .switch_heavyRain {
@@ -649,23 +738,25 @@ This is for a future button of mute
     height: 80px;
     width: 100%;
     display: flex;
-    margin-left: 3%;
+    margin-left: 4%;
+    margin-top: 1%;
     align-items: center;
+    
 }
 
 
-.slider_water .iconWater {
+.slider_water .icon_Water {
     background-color: transparent;
     text-align:center;
-    width: 15%;
-    margin-top: 3%;
+    width: 20%;
+    height: 60%;
 }
 
 .slider_water .input_range_water {
     background-color: transparent;
     text-align: center;
-    width: 60%;
-    margin-left: 2%;
+    width: 55%;
+
 }
 
 .slider_water .value_water {
@@ -673,15 +764,14 @@ This is for a future button of mute
     text-align: center;
     width: 10%;
     font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
     color:#1d0b38;
 }
 
 .slider_water .infinity_water {
 	position: relative;
-  width: 10%;
-	height: 8%;
-	scale:1.6;
-
+    width: 10%;
+	height: 12%;
   }
 
 .slider_water .value_water_dbfs {
@@ -690,9 +780,8 @@ This is for a future button of mute
   text-align: center;
   width: 8%;
   font: 600 1rem/1rem 'Jost', sans-serif;
+  font-size: 85%;
   color:#292430;
-
-
 
 }
 /*
@@ -706,73 +795,411 @@ This is for a future button of mute
 
 
 /*********************/
-/*   control play    */
+/*       control     */
 /*********************/
 
-.control .play {
-/* Everything about the play button*/
-    border-top: 40px solid transparent;
-    border-bottom: 40px solid transparent;
-    border-left: 70px solid #7f2b51;
-    border-right: 40px solid transparent;
-    margin: 5px auto 50px auto;
+.control {
+    background-color: transparent;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.control .prueba{
+    background-color: #d38157;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    font: 600 1rem/1rem 'Jost', sans-serif;
+    font-size: 90%;
+    color:#1d0b38;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+    margin-left: 15%;
+    padding: 7px;
+    margin-right: 5%;
+}
+
+
+.control .pause{
+    /* Properties of pause */
     position: relative;
-    z-index: 1;
-    transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    left: 30px; /* change this if you want to translate it on the x-axis  */
-    background-color: #f0c27b ;
-    transform: scale(0.6); /* change this if you want to scale it  */
+    width: 80%;
+	height: 80%;
+ 
 }
+.label_timer{
+    display:block;
+}
+@media (min-width: 992px) {
+    /* For PC*/
+    .control .terapia{
+        background-color: #d38157;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        font: 600 1rem/1rem 'Jost', sans-serif;
+        font-size: 90%;
+        color:#1d0b38;
+        cursor: pointer;
+        border: #1d0b38;
+        border-radius: 12px;
+
+        padding: 17px;
+    }
+}
+
+
+@media (min-width: 250px) {
+    /* For Mobile*/
+    .control .terapia{
+        background-color: #d38157;
+        text-align: center;
+        width: 80%;
+        height: 80%;
+        font: 600 1rem/1rem 'Jost', sans-serif;
+        font-size: 90%;
+        color:#1d0b38;
+        cursor: pointer;
+        border: #1d0b38;
+        border-radius: 12px;
+
+        padding: 10px;
+    }
+}
+@media (min-width: 400px) {
+    /* For Mobile*/
+    .control .terapia{
+        background-color: #d38157;
+        text-align: center;
+        width: 100%;
+        height: 80%;
+        font: 600 1rem/1rem 'Jost', sans-serif;
+        font-size: 90%;
+        color:#1d0b38;
+        cursor: pointer;
+        border: #1d0b38;
+        border-radius: 12px;
+
+        padding: 17px;
+    }
+}
+
+.button_timer1{
+    /*
+    First row buttons
+    */
+    background-color: transparent;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 13%;
+    align-items: center;
+}
+
+
+
+.button_timer1 .button_timer10 {
+    background-color: #d38157;
+    text-align: center;
+    width: 25%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
+    color:#1d0b38;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+    margin-left: 2%;
+    padding: 7px;
+}
+
+.button_timer1 .button_timer20 {
+    /*
+    Este es el predefinido, por eso se cambia el color del texto y del fondo
+    con respecto al resto
+    */
+    background-color: #d38157;
+    text-align: center;
+    width: 25%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
+    color:#1d0b38;
+    margin-left: 2%;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+    padding: 7px;
+}
+
+.button_timer1 .button_timer30 {
+    background-color: #d38157;
+    text-align: center;
+    width: 25%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
+    color:#1d0b38;
+    margin-left: 2%;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+    padding: 7px;
+}
+
+.button_timer2 {
+    /*
+    Second row buttons
+    */
+    background-color: transparent;
+    height: 30px;
+    width: 100%;
+    margin-left: 13%;
+    display: flex;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.button_timer2 .button_timer40 {
+    background-color: #d38157;
+    text-align: center;
+    width: 25%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
+    color:#1d0b38;
+    margin-left: 2%;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+    padding: 7px;
+}
+
+.button_timer2 .button_timer50 {
+    background-color: #d38157;
+    text-align: center;
+    width: 25%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
+    color:#1d0b38;
+    margin-left: 2%;
+    padding: 7px;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+}
+
+.button_timer2 .button_timer60 {
+    background-color: #d38157;
+    text-align: center;
+    width: 25%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
+    color:#1d0b38;
+    margin-left: 2%;
+    padding: 7px;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+}
+
+
+.button_timer3 {
+    /*
+    Third row buttons 
+    */
+    background-color: transparent;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    margin-left: 13%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.button_timer3 .button_timer120 {
+    background-color: #d38157;
+    text-align: center;
+    width: 25%;
+    font: 400 1rem/1rem 'Jost', sans-serif;
+    font-size: 85%;
+    color:#1d0b38;
+    margin-left: 29%;
+    padding: 7px;
+    cursor: pointer;
+    border: #1d0b38;
+    border-radius: 12px;
+}
+
+
     
-.control .play:before {
-/*  Properties of the circle */
-    content: '';
-    position: absolute;
-    top: -75px;
-    left: -115px;
-    bottom: -75px;
-    right: -15px;
-    border-radius: 50%;
-    border: 10px solid #7f2b51;
-    z-index: 2;
-    transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-}
+
     
-.control .play:after {
-/* Properties of the play after it got clicked */
-    content: '';
-    opacity: 0;
-    transition: opacity 0.6s;
-    -webkit-transition: opacity 0.6s;
-    -moz-transition: opacity 0.6s;
+ /*================= * TIMER *=================*/
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arimo', sans-serif;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+   }
+    body {
+        background: #d7d7d7;
+        color: white;
+   }
+  
+    .timer {
+        width: 90%;
+        height: 40%;
+        display: block;
+        position: relative;
+        margin-top:-40%;
+
+   }
+    .timer * {
+        cursor: default;
+   }
+    .timer h3 {
+        width: 100%;
+        font-size: 26px;
+        letter-spacing: 4px;
+        text-align: center;
+   }
+    .timer--clock {
+        width: 100%;
+        position: relative;
+        padding-left: 6px;
+        margin-top: 22px;
+        overflow: hidden;
+   }
+    .timer--clock .clock-display-grp {
+        width: 100%;
+        position: relative;
+   }
+
+@media (min-width: 992px) {
+       /* For PC*/
+    .timer--clock .clock-display-grp .number-grp {
+        width: auto;
+        display: block;
+        height: 156px;
+        float: left;
+        overflow: hidden;
+   }
 }
 
-.control .play:hover:before, .control .play:focus:before {
-/* The effect of scale when hover on play or in pause */
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
+@media (max-width: 992px) {
+    /* For Mobile*/
+    .timer--clock .clock-display-grp .number-grp {
+        width: auto;
+        display: block;
+        height: 80px; 
+        float: left;
+        overflow: hidden;
+   }
+
+}
+.timer--clock .clock-display-grp .number-grp .number-grp-wrp {
+    width: 100%;
+    position: relative;
+}
+.timer--clock .clock-display-grp .number-grp .number-grp-wrp .num {
+    width: 100%;
+    position: relative;
+    height: 156px;
 }
 
-.control .play.active {
-/* Properties of pause before it got clicked */
-    border-color: transparent;
+@media (min-width: 992px) {
+    /* For PC*/
+    .timer--clock .clock-display-grp .number-grp .number-grp-wrp .num p {
+        width: auto;
+        display: table;
+        font-size: 140px;
+        line-height: 150px;
+        font-weight: bold;
+   }
+
+   
+.timer--clock .clock-separator p {
+    width: auto;
+    display: table;
+    font-size: 150px;
+    line-height: 150px;
+    font-weight: bold;
+}
+}
+.label_timer{
+    display:block;
 }
 
-.control .play.active:after {
-/* Properties of pause */
-    content: '';
-    opacity: 1;
-    width: 50px;
-    height: 80px;
-    background: #7f2b51;
-    position: absolute;
-    right: 30px;
-    top: -40px;
-    border-left: 20px solid #7f2b51;
-    box-shadow: inset 10px 0 0 0 #f0c27b;
+@media (max-width: 992px) {
+    /* For Mobile*/
+    .timer--clock .clock-display-grp .number-grp .number-grp-wrp .num p {
+        width: auto;
+        display: table;
+        font-size: 80px;
+        line-height: 90px;
+        font-weight: bold;
+   }
+   .timer--clock .clock-separator p {
+        width: auto;
+        display: table;
+        font-size: 80px;
+        line-height: 90px;
+        font-weight: bold;
 }
+}
+
+
+
+    .timer--clock .clock-separator {
+        width: auto;
+        float: left;
+        display: block;
+        height: 156px;
+   }
+
+    .timer h4 {
+        width: 100%;
+        font-size: 10px;
+        letter-spacing: 6px;
+        text-align: center;
+        padding-top: 25px;
+        float: left;
+   }
+    .reload {
+        width: 125px;
+        height: 14px;
+        position: absolute;
+        bottom: 50vh;
+        left: 50%;
+        margin-left: -62.5px;
+        opacity: 0;
+        display: none;
+        cursor: pointer;
+        z-index: 9999;
+   }
+    .reload:hover svg path {
+        fill: #666;
+   }
+    .reload:hover p {
+        color: #666;
+   }
+    .reload svg {
+        width: 12px;
+        height: 12px;
+        float: left;
+        margin-right: 10px;
+   }
+    .reload p {
+        color: #2b2b2b;
+        font-size: 12px;
+        float: left;
+        line-height: 11px;
+   }

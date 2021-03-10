@@ -67,6 +67,10 @@
                         <a class="nav-link" href="#demostracion">Demostración</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#audience">Nosotros</a>
+                    </li>
+
                     <!-- Dropdown Menu (sin uso)--> 
                     <!--          
                     <li class="nav-item dropdown">
@@ -368,7 +372,7 @@
                         </div>
                         
                         <div class="slider_tonegen">
-                            <img class="icon_tonegen" src="https://img.icons8.com/wired/64/000000/tuning-fork.png"/>
+                            <img class="icon_tonegen" src="./static/media/images/tone.svg"/>
                             <!-- <div class="label_tonegen">Tono</div> -->
                             <div class="input_range_tonegen">
                                 <input type="range"min="-60" max="0" value="-60" step="1" class="slider" id="slider_tonegen" data-action="volume-tonegen" >
@@ -395,7 +399,7 @@
                         </div>
 
                         <div class="slider_rain">
-                            <img class="icon_rain" src="https://img.icons8.com/ios/64/000000/rain--v1.png"/>
+                            <img class="icon_rain" src="./static/media/images/rain.svg"/>
                             <div class="input_range_rain">
                                 <input type="range" min="-60" max="0" value="-60" step="1" class="slider" id="slider_rain" data-action="volume-rain">
                             </div>
@@ -408,11 +412,11 @@
                                 <input type="checkbox" id="switch_rain" checked="checked"/>
                                 <label for="switch_rain">Toggle</label>
                             </button>-->
-                
+
                         </div>
 
                         <div class="slider_heavyRain">
-                            <img class="slider_iconHeavyRain" src="https://img.icons8.com/ios/64/000000/storm--v1.png"/>
+                            <img class="icon_heavyRain" src="./static/media/images/heavyRain.svg"/>
                             <!--<div class="label_heavyRain">Lluvia Fuerte</div>-->
                             <div class="input_range_heavyRain">
                                 <input type="range" min="-60" max="0" value="-60" step="1" class="slider" id="slider_heavyRain" data-action="volume-heavyRain" >
@@ -430,7 +434,7 @@
                         </div>
                 
                         <div class="slider_water">
-                            <img class="slider_iconWater" src="https://img.icons8.com/wired/64/000000/water.png"/>
+                            <img class="icon_Water" src="./static/media/images/water.svg"/>
                             <!--<div class="label_water">Agua</div>-->
                             <div class="input_range_water">
                                 <input type="range" min="-60" max="0" value="-60" step="1" class="slider" id="slider_water" data-action="volume-water" >
@@ -448,23 +452,179 @@
                         </div>
 
                         <div class="control">
-                            <button data-playing="false"  class="play" id="play" role="switch" aria-checked="false" style="display: none;" > </button>
+                            <button data-playing="false" class="prueba" id="prueba1" role="switch" data-action="prueba"  >  Iniciar Prueba</button>
+                            <button data-playing="true" class="prueba" id="prueba2"  role="switch"  data-action="prueba2" style="display: none;">  
+                                Pausar Prueba
+                                <!--<object data="./static/media/images/prueba.svg" class="pause" id="pause">-->
+                            </button>
+                            </object>
+                            <a class="popup-with-move-anim" href="#timer-lightbox-1">
+                                <button data-playing="false" class="terapia" id="terapia" role="switch" aria-checked="false" data-action="open_timer">  Iniciar Terapia</button>
+                            </a> 
                         </div>
+
+                        
+                        <!-- Timer -->
+                        <div id="timer-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+                            <div class="row">
+                                <button title="Cerrar (Esc)" type="button" class="mfp-close x-button">×</button>
+
+                                    <p class="label_timer" id="label_timer"> Seleccione la cantidad de minutos que desea para su terapia. </p>
+                                    <div class="button_timer1">
+                                        <button class= "button_timer10" id="button_timer10" type="button" data-action="timer10"> 10 min</button>
+                                        <button class= "button_timer20" id="button_timer20" type="button" data-action="timer20"> 20 min</button>
+                                        <button class= "button_timer30" id="button_timer30" type="button" data-action="timer30"> 30 min</button>
+                                    </div>
+                                    <div class="button_timer2">
+                                        <button class= "button_timer40" id="button_timer40" type="button" data-action="timer40"> 40 min</button>
+                                        <button class= "button_timer50" id="button_timer50" type="button" data-action="timer50"> 50 min</button>
+                                        <button class= "button_timer60" id="button_timer60" type="button" data-action="timer60"> 60 min</button>
+                                    </div>
+                                    <div class="button_timer3">
+                                        <button class= "button_timer120" id="button_timer120" type="button" data-action="timer120"> 120 min</button>
+
+                                    </div>
+                                    <!--<a class="btn-outline-reg mfp-close as-button" href="#timer">Volver</a> -->
+                                    <div class="timer" id="timer" style="display: none;">
+                                        <div class="timer--clock"  >
+                                           <div class="minutes-group clock-display-grp">
+                                              <div class="first number-grp">
+                                                 <div class="number-grp-wrp">
+                                                    <div class="num num-0"><p>0</p></div>
+                                                    <div class="num num-1"><p>1</p></div>
+                                                    <div class="num num-2"><p>2</p></div>
+                                                    <div class="num num-3"><p>3</p></div>
+                                                    <div class="num num-4"><p>4</p></div>
+                                                    <div class="num num-5"><p>5</p></div>
+                                                    <div class="num num-6"><p>6</p></div>
+                                                    <div class="num num-7"><p>7</p></div>
+                                                    <div class="num num-8"><p>8</p></div>
+                                                    <div class="num num-9"><p>9</p></div>
+                                                 </div>
+                                              </div>
+                                              <div class="second number-grp">
+                                                 <div class="number-grp-wrp">
+                                                    <div class="num num-0"><p>0</p></div>
+                                                    <div class="num num-1"><p>1</p></div>
+                                                    <div class="num num-2"><p>2</p></div>
+                                                    <div class="num num-3"><p>3</p></div>
+                                                    <div class="num num-4"><p>4</p></div>
+                                                    <div class="num num-5"><p>5</p></div>
+                                                    <div class="num num-6"><p>6</p></div>
+                                                    <div class="num num-7"><p>7</p></div>
+                                                    <div class="num num-8"><p>8</p></div>
+                                                    <div class="num num-9"><p>9</p></div>
+                                                 </div>
+                                              </div>
+                                           </div>
+                                           <div class="clock-separator"><p>:</p></div>
+                                           <div class="seconds-group clock-display-grp">
+                                              <div class="first number-grp">
+                                                 <div class="number-grp-wrp">
+                                                    <div class="num num-0"><p>0</p></div>
+                                                    <div class="num num-1"><p>1</p></div>
+                                                    <div class="num num-2"><p>2</p></div>
+                                                    <div class="num num-3"><p>3</p></div>
+                                                    <div class="num num-4"><p>4</p></div>
+                                                    <div class="num num-5"><p>5</p></div>
+                                                    <div class="num num-6"><p>6</p></div>
+                                                    <div class="num num-7"><p>7</p></div>
+                                                    <div class="num num-8"><p>8</p></div>
+                                                    <div class="num num-9"><p>9</p></div>
+                                                 </div>
+                                              </div>
+                                              <div class="second number-grp">
+                                                 <div class="number-grp-wrp">
+                                                    <div class="num num-0"><p>0</p></div>
+                                                    <div class="num num-1"><p>1</p></div>
+                                                    <div class="num num-2"><p>2</p></div>
+                                                    <div class="num num-3"><p>3</p></div>
+                                                    <div class="num num-4"><p>4</p></div>
+                                                    <div class="num num-5"><p>5</p></div>
+                                                    <div class="num num-6"><p>6</p></div>
+                                                    <div class="num num-7"><p>7</p></div>
+                                                    <div class="num num-8"><p>8</p></div>
+                                                    <div class="num num-9"><p>9</p></div>
+                                                 </div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                <!-- end of col -->
+                            </div> <!-- end of row -->
+                        </div> <!-- end of lightbox-basic -->
                         
                     </div>
-
-                
+    
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-2 -->
     <!-- end of takeaways -->
 
+    <!-- Nosotros -->
+    <div id="audience" class="split" >
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 align="center" class="title_about" >Nosotros</h1>
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+		<div class="area-1">
+		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            <p class="media-body" color="#1d0b38">Mi nombre es Magali Legari. Mi área de incumbencia profesional nace desde la
+                                audiología.</p>
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="media">
+                                    <i class="fas fa-chevron-right"></i>
+                                    <p class="media-body">Doctora en Fonoaudiología
+                                        desde el 2012 (UMSA) - Hace un poco más de 20 años que trabajo en el
+                                        equipamiento auditivo de personas hipoacúsicas sobre todo en adolescentes y
+                                        adultos.</p>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-chevron-right"></i>
+                                    <p class="media-body">Acúfeno (Tinnitus) e Hiperacusia - Más de diez años que me dedico a la evaluación y el tratamiento de
+                                        personas con estos síntomas.</p>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-chevron-right"></i> 
+                                    <p class="media-body">Coordino el Área de
+                                        Equipamiento Auditivo en CEMIC - Formo parte del Comité Académico y soy profesora
+                                        en la Especialidad en Audiología de la UMSA.</p>
+                                </li>
+                                <li class="media">
+                                    <i class="fas fa-chevron-right"></i>
+                                    <p class="media-body">Tengo un consultorio propio en dónde me desempeño como
+                                        audióloga - Recibo la derivación de pacientes desde varios centros médicos a los
+                                        que les agradezco el poder trabajar en equipo.</p>
+                                </li>
+                            </ul>
+                            <a class="btn-solid-reg" target="_blank" href="./static/media/images/CV_2021_Legari_Magali.pdf">MI CV</a>
+                                <hr class="hr-heading"></hr>
+                            <div class="team2"><strong>Colaboradores</strong ></div>
+                            <div class="team" ><strong>Idea original - </strong ><a href="https://www.linkedin.com/in/magal%C3%AD-legari-66813135">Magalí Legari</a><br></br> </div>
+                            <div class="team" ><strong>Líder de equipo - </strong ><a href="https://www.linkedin.com/in/myommi">Maximiliano Yommi</a> <br></br> </div>
+                            <div class="team" ><strong>Diseño - </strong ><a href="https://www.linkedin.com/in/arturobianchetti">Arturo Bianchetti</a><br></br>  </div>
+                            <div class="team" ><strong>Desarrollo Js - </strong ><a href="https://www.linkedin.com/in/fabricio-chungo-983421b2/">Fabricio Chungo</a><br></br>  </div>
+                            <div class="team" ><strong>Desarrollo Js - </strong ><a href="https://www.linkedin.com/in/santiago-a-martinez/">Santiago Martínez</a><br></br>  </div>
+
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+		</div> <!-- end of area-2 -->
+    </div> <!-- end of split -->
+    <!-- end of audience -->
+    
     <!-- Footer -->
     <div class="footer" id="footers">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3>Si queres conocer más acerca de sonora no dudes en escribirnos a <a href="mailto:tuterapiasonora@gmail.com">tuterapiasonora@gmail.com</a> o enviarnos un mensaje a nuestro <a href="https://api.whatsapp.com/send?phone=5491160159421&text=Hola" target="_blank">whatsapp.</a></h3>
+                    <h3>Si querés conocer más acerca de sonora no dudes en escribirnos a <a href="mailto:tuterapiasonora@gmail.com">tuterapiasonora@gmail.com</a> o enviarnos un mensaje a nuestro <a href="https://api.whatsapp.com/send?phone=5491160159421&text=Hola" target="_blank">whatsapp.</a></h3>
                     <h3>Seguinos</h3>
                     <div class="social-container">
                         <span class="fa-stack">
@@ -485,7 +645,7 @@
                                 <i class="fab fa-instagram fa-stack-1x"></i>
                             </a>
                         </span>
-                        <span class="fa-stack" style="display: none">
+                        <span class="fa-stack" style="display: none" >
                             <a href="#your-link">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-youtube fa-stack-1x"></i>
@@ -507,17 +667,17 @@
                     <ul class="list-unstyled li-space-lg p-small">
                         <li><a href="#sonora">Sonora</a></li>
                         <li><a href="#demostracion">Demostración</a></li>
+                        <li><a href="#nosotros">Acerca de nosotros</a></li>
                         <li><a href="#footers">Contactanos</a></li>
                     </ul>
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
-                    <p class="p-small statement">Copyright © <a href="https://inovatik.com">Landing Page Template - Inovatik </a></p>
+                    <p class="p-small statement">Copyright © <a class="p-small statement" href="https://inovatik.com">Landing Page Template - Inovatik </a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
     </div> <!-- end of copyright --> 
     <!-- end of copyright -->
-    
     	
     <!-- Scripts -->
     <script src="static/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
@@ -530,6 +690,7 @@
     <script src="static/js/scripts.js"></script> <!-- Custom scripts -->   
     <script src="static/js/mixer_audioMain.js"></script> <!-- Custom mixer main scripts -->  
     <script src="static/js/mixer_components.js"></script> <!-- Custom mixer components scripts --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script> <!-- Timer animation --> 
 
 </body>
 </html>

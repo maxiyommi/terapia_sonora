@@ -13,7 +13,7 @@ noisePink.connect(gainNodePink);
 gainNodePink.connect(audioCtx.destination);
 
 console.log(audioCtx.state);
-
+timer_on=0;
 sliderPink.oninput = function(){
     numberPink.innerHTML = sliderPink.value;
 }
@@ -179,8 +179,8 @@ sliderNarrow.oninput = function(){
 
 Narrow250.addEventListener('click', function() {
 	/*
-	Function activated when user click on the "250 Hz" button
-*/
+	Function activated when user clicks on the "250 Hz" button.
+	*/
 		color("button_narrow250")	
 	
 		if (playButton.dataset.playing === 'true'){
@@ -189,10 +189,11 @@ Narrow250.addEventListener('click', function() {
 			*/
 			noiseNarrow.stop();
 			noiseNarrow = new Tone.Player(buffer250);
+			console.log("buffer250");
 			noiseNarrow.loop = true;
 			noiseNarrow.connect(gainNodeNarrow);
 			gainNodeNarrow.connect(audioCtx.destination);
-			console.log("250");
+			console.log("2501");
 			noiseNarrow.start();
 		}
 		else{
@@ -200,7 +201,7 @@ Narrow250.addEventListener('click', function() {
 			noiseNarrow.loop = true;
 			noiseNarrow.connect(gainNodeNarrow);
 			gainNodeNarrow.connect(audioCtx.destination);
-			console.log("250");
+			console.log("2502");
 		}
 
 }, false);
@@ -419,20 +420,20 @@ function color(button){
 			-------
 			button (str): takes the ID of the button, set this to one "checked" color and change the rest to the original one.
 			*/
-str = ["button_narrow250", "button_narrow500", "button_narrow1k", "button_narrow2k", "button_narrow3k", "button_narrow4k", "button_narrow6k", "button_narrow8k", "button_narrow10k", "button_narrow12k"];
-var i;
+	str = ["button_narrow250", "button_narrow500", "button_narrow1k", "button_narrow2k", "button_narrow3k", "button_narrow4k", "button_narrow6k", "button_narrow8k", "button_narrow10k", "button_narrow12k"];
+	var i;
 
-for (i = 0; i < str.length; i++) {
-	if (str[i] == button){
-		document.getElementById(str[i]).style.color = "#d38157";
-		document.getElementById(str[i]).style.backgroundColor = "#1d0b38"
-		aux=i
-	}
-	else{
-		document.getElementById(str[i]).style.color = "#1d0b38";
-		document.getElementById(str[i]).style.backgroundColor = "#d38157";
+	for (i = 0; i < str.length; i++) {
+		if (str[i] == button){
+			document.getElementById(str[i]).style.color = "#d38157";
+			document.getElementById(str[i]).style.backgroundColor = "#1d0b38"
+			aux=i
+		}
+		else{
+			document.getElementById(str[i]).style.color = "#1d0b38";
+			document.getElementById(str[i]).style.backgroundColor = "#d38157";
 
-	}
+		}
 	}
 }
 
@@ -762,5 +763,205 @@ onOffSwitchWater.addEventListener('change', function() {
 	this.setAttribute( 'aria-checked', state ? "true" : "false" );
 }, false);
 */
-console.log("loaded");
-document.getElementById("play").style.display = "block";
+
+const OpenTimer = document.querySelector('[data-action="open_timer"]');
+const Timer10 = document.querySelector('[data-action="timer10"]');
+const Timer20 = document.querySelector('[data-action="timer20"]');
+const Timer30 = document.querySelector('[data-action="timer30"]');
+const Timer40 = document.querySelector('[data-action="timer40"]');
+const Timer50 = document.querySelector('[data-action="timer50"]');
+const Timer60 = document.querySelector('[data-action="timer60"]');
+const Timer120 = document.querySelector('[data-action="timer120"]');
+
+
+
+OpenTimer.addEventListener('click', function() {
+	pause();
+	timer(1)
+
+}, false);
+
+Timer10.addEventListener('click', function() {
+	var time = "10:00";
+	playTimer(time)
+}, false);
+
+Timer20.addEventListener('click', function() {
+	var time = "20:00";
+	playTimer(time)
+}, false);
+
+Timer30.addEventListener('click', function() {
+	var time = "30:00";
+	playTimer(time)
+}, false);
+
+Timer40.addEventListener('click', function() {
+	var time = "40:00";
+	playTimer(time)
+}, false);
+
+Timer50.addEventListener('click', function() {
+	var time = "50:00";
+	playTimer(time)
+}, false);
+
+Timer60.addEventListener('click', function() {
+	var time = "60:00";
+	playTimer(time)
+}, false);
+
+Timer120.addEventListener('click', function() {
+	var time = "120:00";
+	playTimer(time)
+}, false);
+
+function playTimer(time){
+	console.log(time);
+	timer(0)
+	initTimer(time);
+	play();
+	
+}
+function timer(x){
+	if(x==0){
+	document.getElementById("button_timer10").style.display = "none"
+	document.getElementById("button_timer20").style.display = "none"
+	document.getElementById("button_timer30").style.display = "none"
+	document.getElementById("button_timer40").style.display = "none"
+	document.getElementById("button_timer50").style.display = "none"
+	document.getElementById("button_timer60").style.display = "none"
+	document.getElementById("button_timer120").style.display = "none"
+	document.getElementById("label_timer").style.display = "none"
+	document.getElementById("timer").style.display = "block"
+	timer_on = 1;
+	}
+	else{
+	document.getElementById("button_timer10").style.display = "block"
+	document.getElementById("button_timer20").style.display = "block"
+	document.getElementById("button_timer30").style.display = "block"
+	document.getElementById("button_timer40").style.display = "block"
+	document.getElementById("button_timer50").style.display = "block"
+	document.getElementById("button_timer60").style.display = "block"
+	document.getElementById("button_timer120").style.display = "block"
+	document.getElementById("label_timer").style.display = "block"
+	document.getElementById("timer").style.display = "none"
+	timer_on = 0;
+	}
+
+}
+
+/*********************/
+/*   Timer   */
+/*********************/
+
+
+
+ // other ways --> "0:15" "03:5" "5:2"
+
+var reloadBtn = document.querySelector('.reload');
+var timerEl = document.querySelector('.timer');
+
+
+function initTimer (t) {
+
+	stop=0;
+   
+   var self = this,
+       timerEl = document.querySelector('.timer'),
+       minutesGroupEl = timerEl.querySelector('.minutes-group'),
+       secondsGroupEl = timerEl.querySelector('.seconds-group'),
+
+       minutesGroup = {
+          firstNum: minutesGroupEl.querySelector('.first'),
+          secondNum: minutesGroupEl.querySelector('.second')
+       },
+
+       secondsGroup = {
+          firstNum: secondsGroupEl.querySelector('.first'),
+          secondNum: secondsGroupEl.querySelector('.second')
+       };
+
+   var time = {
+      min: t.split(':')[0],
+      sec: t.split(':')[1]
+   };
+
+   var timeNumbers;
+   
+   function updateTimer() {
+
+      var timestr;
+      var date = new Date();
+
+      date.setHours(0);
+      date.setMinutes(time.min);
+      date.setSeconds(time.sec);
+
+      var newDate = new Date(date.valueOf() - 1000);
+      var temp = newDate.toTimeString().split(" ");
+      var tempsplit = temp[0].split(':');
+
+      time.min = tempsplit[1];
+      time.sec = tempsplit[2];
+
+	  if (stop==1){
+		  time.min="00"
+		  time.sec="00"
+	  }
+      timestr = time.min + time.sec;
+      timeNumbers = timestr.split('');
+	  console.log(timeNumbers)
+
+      updateTimerDisplay(timeNumbers);
+
+      if(timestr === '0000')
+        countdownFinished();
+
+	  if(timestr != '0000')
+        setTimeout(updateTimer, 1000);
+
+   }
+
+   function updateTimerDisplay(arr) {
+
+      animateNum(minutesGroup.firstNum, arr[0]);
+      animateNum(minutesGroup.secondNum, arr[1]);
+      animateNum(secondsGroup.firstNum, arr[2]);
+      animateNum(secondsGroup.secondNum, arr[3]);
+
+   }
+
+   function animateNum (group, arrayValue) {
+
+      TweenMax.killTweensOf(group.querySelector('.number-grp-wrp'));
+      TweenMax.to(group.querySelector('.number-grp-wrp'), 1, {
+         y: - group.querySelector('.num-' + arrayValue).offsetTop
+      });
+
+   }
+   
+   setTimeout(updateTimer, 1000);
+
+}
+
+function countdownFinished() {
+   setTimeout(function () {
+      TweenMax.to(timerEl, 1, {});
+   }, 1000);
+   pause();
+   $.magnificPopup.proto.close.call()
+}
+
+
+/*********************/
+
+$(document).on('click', function(event) {
+    if ($(event.target).has('').length) {
+        $(".lightbox").hide();
+    }
+});
+
+/********Lightbox**********/
+
+

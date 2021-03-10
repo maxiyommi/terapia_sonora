@@ -56,8 +56,32 @@
 		preloader: false,
 		midClick: true,
 		removalDelay: 300,
-		mainClass: 'my-mfp-slide-bottom'
-    });
+		mainClass: 'my-mfp-slide-bottom',
+        callbacks: {
+            open: function() {
+              $.magnificPopup.instance.close = function() {
+                // Función encargada de generar la ventana emergente
+                if(timer_on===1) { 
+                    console.log(timer_on)              
+                    var confirmed = confirm("¿Está seguro que quiere interrumpir la terapia?");
+                    if(!confirmed) {
+                    
+                        return;
+                    }
+                    else{
+
+                        pause();//Pausa el reproductor
+                        stop=1; //Lleva el contador a 0 y lo desactiva
+
+                        }
+                }
+                $.magnificPopup.proto.close.call(this);
+              };
+            }
+          }
+        });
+
+
 
 
     /* Video Lightbox - Magnific Popup */
