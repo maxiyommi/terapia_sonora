@@ -42,6 +42,7 @@ Table Of Contents:
     color:#1d0b38;
     margin-left:2.5%;
     margin-right:2.5%;
+    user-select: text;
 }
 
 .slider_pink .input_range_pink {
@@ -57,6 +58,8 @@ Table Of Contents:
     font: 600 1rem/1rem 'Jost', sans-serif;
     font-size: 85%;
     color:#1d0b38;
+    user-select: text;
+    
 }
 
 .slider_pink .infinity_pink {
@@ -73,6 +76,7 @@ Table Of Contents:
     font: 600 1rem/1rem 'Jost', sans-serif;
     font-size: 85%;
     color:#292430;
+    user-select: text;
   }
 /*
 This is for a future button of mute
@@ -107,6 +111,7 @@ This is for a future button of mute
     color:#1d0b38;
     margin-left:2.5%;
     margin-right:2.5%;
+    user-select: text;
 }
 
 .slider_white .input_range_white {
@@ -123,13 +128,13 @@ This is for a future button of mute
     font: 600 1rem/1rem 'Jost', sans-serif;
     font-size: 85%;
     color:#1d0b38;
+    user-select: text;
 }
 
 .slider_white .infinity_white {
 	position: relative;
     width: 10%;
     height: 12%;
-
   }
 
 .slider_white .value_white_dbfs {
@@ -140,6 +145,7 @@ This is for a future button of mute
   font: 600 1rem/1rem 'Jost', sans-serif;
   font-size: 85%;
   color:#292430;
+  user-select: text;
 
 
 
@@ -180,6 +186,7 @@ Text or future icon of narrow
     color:#1d0b38;
     margin-left:2.5%;
     margin-right:2.5%;
+    user-select: text;
 }
 
 
@@ -199,12 +206,14 @@ Narrow slider
     font: 600 1rem/1rem 'Jost', sans-serif;
     font-size: 85%;
     color:#1d0b38;
+    user-select: text;
 }
 
 .slider_narrow .infinity_narrow {
 	position: relative;
     width: 10%;
 	height: 12%;
+    user-select: text;
 
   }
 
@@ -216,7 +225,7 @@ Narrow slider
     font: 600 1rem/1rem 'Jost', sans-serif;
     font-size: 85%;
     color:#292430;
-  
+    user-select: text; 
   
   
   }
@@ -457,6 +466,7 @@ This is for a future button of mute
     font: 600 1rem/1rem 'Jost', sans-serif;
     font-size: 85%;
     color:#1d0b38;
+    user-select: text;
 }
 
 
@@ -475,10 +485,7 @@ This is for a future button of mute
   font: 600 1rem/1rem 'Jost', sans-serif;
   font-size: 85%;
   color:#292430;
- 
-
-
-
+  user-select: text;
 }
 .slider_tonegen_freq {
     background-color: transparent;
@@ -488,6 +495,7 @@ This is for a future button of mute
     margin-bottom: 4%;
     align-items: center;
     margin-left: 30%;
+
 }
 
 
@@ -508,6 +516,7 @@ This is for a future button of mute
         font: 600 1rem/1rem 'Jost', sans-serif;
         font-size: 85%;
         color:#1d0b38;
+        user-select: text;
     }
     .slider_tonegen_freq .value_tonegen_freq_Hz {
         /* 
@@ -539,6 +548,7 @@ This is for a future button of mute
         font-size: 75%;
         color:#1d0b38;
         margin-left: 4%;
+        user-select: text;
     }
     .slider_tonegen_freq .value_tonegen_freq_Hz {
         /* 
@@ -551,8 +561,7 @@ This is for a future button of mute
         font-size: 75%;
         color:#1d0b38;
         margin-left:4%;
-
-        
+        user-select: text;
     }
 
 }
@@ -569,6 +578,7 @@ This is for a future button of mute
     font-size: 85%;
     color:#1d0b38;
     margin-left: 5%;
+    user-select: text;
 }
 .slider_tonegen_freq .value_tonegen_freq_Hz {
     /* 
@@ -581,6 +591,7 @@ This is for a future button of mute
     font-size: 85%;
     color:#1d0b38;
     margin-right: 2%;
+    user-select: text;
     
 }
 
@@ -629,6 +640,7 @@ This is for a future button of mute
     font: 600 1rem/1rem 'Jost', sans-serif;
     font-size: 85%;
     color:#1d0b38;
+    user-select: text;
 }
 
 .slider_rain .infinity_rain {
@@ -645,6 +657,7 @@ This is for a future button of mute
   font: 600 1rem/1rem 'Jost', sans-serif;
   font-size: 85%;
   color:#292430;
+  user-select: text;
 }
 
 
@@ -703,6 +716,7 @@ This is for a future button of mute
     font: 600 1rem/1rem 'Jost', sans-serif;
     font-size: 85%;
     color:#1d0b38;
+    user-select: text;
 }
 
 .slider_heavyRain .infinity_heavyRain {
@@ -720,6 +734,7 @@ This is for a future button of mute
   font: 600 1rem/1rem 'Jost', sans-serif;
   font-size: 85%;
   color:#292430;
+  user-select: text;
 }
 /*
 .slider_heavyRain .switch_heavyRain {
@@ -766,6 +781,7 @@ This is for a future button of mute
     font: 600 1rem/1rem 'Jost', sans-serif;
     font-size: 85%;
     color:#1d0b38;
+    user-select: text;
 }
 
 .slider_water .infinity_water {
@@ -782,6 +798,7 @@ This is for a future button of mute
   font: 600 1rem/1rem 'Jost', sans-serif;
   font-size: 85%;
   color:#292430;
+  user-select: text;
 
 }
 /*

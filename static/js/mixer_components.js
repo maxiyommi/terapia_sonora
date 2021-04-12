@@ -8,7 +8,7 @@ const onOffSwitchPink = document.querySelector('.switch_pink');
 const gainNodePink = new Tone.Gain(0.05);
 const noisePink = new Tone.Player("./static/media/audio/pinkNoise.wav");
 noisePink.loop = true;
-gainNodePink.gain.value = Math.pow(10, volumeControlPink.value / 20);
+gainNodePink.gain.value = 0;
 noisePink.connect(gainNodePink);
 gainNodePink.connect(audioCtx.destination);
 
@@ -71,7 +71,7 @@ const onOffSwitchWhite = document.querySelector('.switch_white');
 const gainNodeWhite = new Tone.Gain(0.5);
 const noiseWhite = new Tone.Player("./static/media/audio/whiteNoise.wav");
 noiseWhite.loop = true;
-gainNodeWhite.gain.value = Math.pow(10, volumeControlWhite.value / 20);
+gainNodeWhite.gain.value = 0;
 noiseWhite.connect(gainNodeWhite);
 gainNodeWhite.connect(audioCtx.destination);
 
@@ -164,7 +164,7 @@ const buffer8k = new Tone.Buffer("./static/media/audio/narrowband8k.wav");
 const buffer10k = new Tone.Buffer("./static/media/audio/narrowband10k.wav");
 const buffer12k = new Tone.Buffer("./static/media/audio/narrowband12k.wav");
 
-gainNodeNarrow.gain.value = Math.pow(10, volumeControlNarrow.value / 20);
+gainNodeNarrow.gain.value = 0;
 noiseNarrow.connect(gainNodeNarrow);
 gainNodeNarrow.connect(audioCtx.destination);
 
@@ -495,7 +495,7 @@ const onOffSwitchTonegen = document.querySelector('.switch_tonegen');
 const gainNodeTonegen = new Tone.Gain(0.5);
 const noiseTonegen = new Tone.Oscillator(freqControlTonegen.value, "sine");
 
-gainNodeTonegen.gain.value = Math.pow(10, volumeControlTonegen.value / 20);
+gainNodeTonegen.gain.value =  0;
 noiseTonegen.connect(gainNodeTonegen);
 gainNodeTonegen.connect(audioCtx.destination);
 noiseTonegen.frequency = sliderTonegenFreq.value;
@@ -576,7 +576,8 @@ var noiseRain = new Tone.Player(buff);
 noiseRain.loop = true;
 
 
-gainNodeRain.gain.value = Math.pow(10, volumeControlRain.value / 20);
+gainNodeRain.gain.value = 0;
+
 noiseRain.connect(gainNodeRain);
 gainNodeRain.connect(audioCtx.destination);
 console.log(audioCtx.state);
@@ -641,7 +642,7 @@ const noiseHeavyRain = new Tone.Player("./static/media/audio/heavyRain.wav").con
 noiseHeavyRain.loop = true;
 
 
-gainNodeHeavyRain.gain.value = Math.pow(10, volumeControlHeavyRain.value / 20);
+gainNodeHeavyRain.gain.value = 0;
 noiseHeavyRain.connect(gainNodeHeavyRain);
 gainNodeHeavyRain.connect(audioCtx.destination);
 console.log(audioCtx.state);
@@ -712,7 +713,7 @@ const gainNodeWater = new Tone.Gain(0.5);
 const noiseWater = new Tone.Player("./static/media/audio/Water.wav");
 noiseWater.loop = true;
 
-gainNodeWater.gain.value = Math.pow(10, volumeControlWater.value / 20);
+gainNodeWater.gain.value = 0;
 noiseWater.connect(gainNodeWater);
 gainNodeWater.connect(audioCtx.destination);
 console.log(audioCtx.state);

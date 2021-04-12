@@ -167,8 +167,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-20">
-                    <h1>¿Qué es Sonora?</h1>
-                    <p class="p-heading">Sonora te propone contar con las herramientas necesarias para realizar una Terapia Sonora para el tratamiento de síntomas como son los Acúfenos /Tinnitus, la Hiperacusia y como complemento de ayuda en algunas Hipoacusias de una manera accesible, amigable y personal.</p>
+                    <h1 user-select= "text">¿Qué es Sonora?</h1>
+                    <p class="p-heading" >Sonora te propone contar con las herramientas necesarias para realizar una Terapia Sonora para el tratamiento de síntomas como son los Acúfenos /Tinnitus, la Hiperacusia y como complemento de ayuda en algunas Hipoacusias de una manera accesible, amigable y personal.</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
 
@@ -282,7 +282,7 @@
             <button title="Cerrar (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-12">             
                 <h3>Personal</h3>
-                <p>Las herramientas están disponibles para todos. Los síntomas son vividos de manera diferente según quien los presenta, y si son aislados o conviven con otros síntomas, necesitan de una propuesta terapéutica apropiada para lograr el objetivo que se busca. Te recomendamos consultar con un profesional la mejor manera de utilizar la  Terapia Sonora en tu caso.</p>
+                <p>Sonora es una herramienta terapéutica para síntomas que aunque se nombren igual, son diferentes según que lo genera y quien lo presenta. Es importante realizar una evaluación que direccione el tratamiento a utilizar para lograr la mejoría buscada. Te recomendamos consultar con un profesional para utilizar la mejor terapia sonora para tu caso.</p>
                 <a class="btn-outline-reg mfp-close as-button" href="#description">Volver</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
@@ -294,7 +294,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Demostración</h1>
+                    <h1 user-select= "text">Demostración</h1>
                     <p class="p-heading">Es muy importante antes de utilizar la consola de sonidos saber qué estímulo/s utilizar, con qué intensidad, con qué frecuencia, durante cuánto tiempo y si es a través de los parlantes o con auriculares. Esos datos serán definidos por la terapia sugerida  para tratar su problema en particular. No deje de consultar cuál sería la mejor terapia sonora para su caso y en Sonora tendrá las herramientas disponibles para utilizarla de modo accesible, amigable y personal. </p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -307,8 +307,8 @@
                             <div class="input_range_pink">
                                 <input type="range" min="-60" max="0" value="-60" step="1" class="slider" id="slider_pink" data-action="volume-pink" >
                             </div>
-                            <div class="value_pink" id="value_pink">-60</div>  
-                            <object data="./static/media/images/infinity.svg" class="infinity_pink" id="infinity_pink" style="display: none;"></object>
+                            <div class="value_pink" id="value_pink" style="display: none;">-60</div>  
+                            <object data="./static/media/images/infinity.svg" class="infinity_pink" id="infinity_pink" ></object>
                             <div class="value_pink_dbfs" id="value_pink_dbfs">dBFS</div>
                 
                             <!--
@@ -325,8 +325,8 @@
                             <div class="input_range_white" >
                                 <input type="range" min="-60" max="0" value="-60" step="1" class="slider" id="slider_white" data-action="volume-white" >
                             </div>
-                            <div class="value_white" id="value_white" >-60</div>  
-                            <object data="./static/media/images/infinity.svg" class="infinity_white" id="infinity_white" style="display: none;"></object>
+                            <div class="value_white" id="value_white" style="display: none;" >-60</div>  
+                            <object data="./static/media/images/infinity.svg" class="infinity_white" id="infinity_white" ></object>
                             <div class="value_white_dbfs" id="value_white_dbfs">dBFS</div>
                             <!--
                                 This is for a future button of mute
@@ -342,8 +342,8 @@
                             <div class="input_range_narrow">
                                 <input type="range" min="-60" max="0" value="-60" step="1" class="slider" id="slider_narrow" data-action="volume-narrow" >
                             </div>
-                            <div class="value_narrow" id="value_narrow">-60</div>  
-                            <object data="./static/media/images/infinity.svg" class="infinity_narrow" id="infinity_narrow" style="display: none;"></object>
+                            <div class="value_narrow" id="value_narrow" style="display: none;">-60</div>  
+                            <object data="./static/media/images/infinity.svg" class="infinity_narrow" id="infinity_narrow" ></object>
                             <div class="value_narrow_dbfs" id="value_narrow_dbfs">dBFS</div>  
                             
                             <!--
@@ -377,8 +377,8 @@
                             <div class="input_range_tonegen">
                                 <input type="range"min="-60" max="0" value="-60" step="1" class="slider" id="slider_tonegen" data-action="volume-tonegen" >
                             </div>
-                            <div class="value_tonegen" id="value_tonegen">-60</div>
-                            <object data="./static/media/images/infinity.svg" class="infinity_tonegen" id="infinity_tonegen" style="display: none;"></object>
+                            <div class="value_tonegen" id="value_tonegen" style="display: none;">-60</div>
+                            <object data="./static/media/images/infinity.svg" class="infinity_tonegen" id="infinity_tonegen" ></object>
                             <div class="value_tonegen_dbfs" id="value_tonegen_dbfs">dBFS</div>  
                             <!--
                                 This is for a future button of mute
@@ -393,7 +393,7 @@
                             <div class="input_range_tonegen_freq">
                                 <input type="range" min="250" max="12000" value="1000" step="50" class="slider" id="slider_tonegen_freq" data-action="freq-tonegen" >
                             </div>
-                            <div class="value_tonegen_freq" id="value_tonegen_freq">1000</div>
+                            <div class="value_tonegen_freq" id="value_tonegen_freq" >1000</div>
                             <div class="value_tonegen_freq_Hz">Hz</div>
                             
                         </div>
@@ -403,8 +403,8 @@
                             <div class="input_range_rain">
                                 <input type="range" min="-60" max="0" value="-60" step="1" class="slider" id="slider_rain" data-action="volume-rain">
                             </div>
-                            <div class="value_rain" id="value_rain">-60</div>    
-                            <object data="./static/media/images/infinity.svg" class="infinity_rain" id="infinity_rain" style="display: none;"></object>
+                            <div class="value_rain" id="value_rain" style="display: none;">-60</div>    
+                            <object data="./static/media/images/infinity.svg" class="infinity_rain" id="infinity_rain" ></object>
                             <div class="value_rain_dbfs" id="value_rain_dbfs">dBFS</div>  
                             <!--
                                 This is for a future button of mute
@@ -421,8 +421,8 @@
                             <div class="input_range_heavyRain">
                                 <input type="range" min="-60" max="0" value="-60" step="1" class="slider" id="slider_heavyRain" data-action="volume-heavyRain" >
                             </div>
-                            <div class="value_heavyRain" id="value_heavyRain">-60</div>    
-                            <object data="./static/media/images/infinity.svg" class="infinity_heavyRain" id="infinity_heavyRain" style="display: none;"></object>
+                            <div class="value_heavyRain" id="value_heavyRain" style="display: none;">-60</div>    
+                            <object data="./static/media/images/infinity.svg" class="infinity_heavyRain" id="infinity_heavyRain" ></object>
                             <div class="value_heavyRain_dbfs" id="value_heavyRain_dbfs">dBFS</div>  
                             <!--
                                 This is for a future button of mute
@@ -439,8 +439,8 @@
                             <div class="input_range_water">
                                 <input type="range" min="-60" max="0" value="-60" step="1" class="slider" id="slider_water" data-action="volume-water" >
                             </div>
-                            <div class="value_water" id="value_water">-60</div>    
-                            <object data="./static/media/images/infinity.svg" class="infinity_water" id="infinity_water" style="display: none;"></object>
+                            <div class="value_water" id="value_water" style="display: none;">-60</div>    
+                            <object data="./static/media/images/infinity.svg" class="infinity_water" id="infinity_water" ></object>
                             <div class="value_water_dbfs" id="value_water_dbfs">dBFS</div>  
                             <!--
                                 This is for a future button of mute
@@ -452,14 +452,14 @@
                         </div>
 
                         <div class="control">
-                            <button data-playing="false" class="prueba" id="prueba1" role="switch" data-action="prueba"  >  Iniciar Prueba</button>
+                            <button data-playing="false" class="prueba" id="prueba1" role="switch" data-action="prueba"  >  Modo Prueba</button>
                             <button data-playing="true" class="prueba" id="prueba2"  role="switch"  data-action="prueba2" style="display: none;">  
                                 Pausar Prueba
                                 <!--<object data="./static/media/images/prueba.svg" class="pause" id="pause">-->
                             </button>
                             </object>
                             <a class="popup-with-move-anim" href="#timer-lightbox-1">
-                                <button data-playing="false" class="terapia" id="terapia" role="switch" aria-checked="false" data-action="open_timer">  Iniciar Terapia</button>
+                                <button data-playing="false" class="terapia" id="terapia" role="switch" aria-checked="false" data-action="open_timer">  Modo Terapia</button>
                             </a> 
                         </div>
 
@@ -565,7 +565,7 @@
     <div id="audience" class="split" >
         <div class="row">
             <div class="col-lg-12">
-                <h1 align="center" class="title_about" >Nosotros</h1>
+                <h1 align="center" class="title_about" user-select= "text" >Nosotros</h1>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
 		<div class="area-1">
@@ -604,8 +604,8 @@
                             </ul>
                             <a class="btn-solid-reg" target="_blank" href="./static/media/images/CV_2021_Legari_Magali.pdf">MI CV</a>
                                 <hr class="hr-heading"></hr>
-                            <div class="team2"><strong>Colaboradores</strong ></div>
-                            <div class="team" ><strong>Idea original - </strong ><a href="https://www.linkedin.com/in/magal%C3%AD-legari-66813135">Magalí Legari</a><br></br> </div>
+                            <div class="team2" ><strong >Colaboradores</strong ></div>
+                            <div class="team" ><strong>Idea original - </strong ><a href="https://www.linkedin.com/in/magal%C3%AD-legari-66813135" >Magalí Legari</a><br></br> </div>
                             <div class="team" ><strong>Líder de equipo - </strong ><a href="https://www.linkedin.com/in/myommi">Maximiliano Yommi</a> <br></br> </div>
                             <div class="team" ><strong>Diseño - </strong ><a href="https://www.linkedin.com/in/arturobianchetti">Arturo Bianchetti</a><br></br>  </div>
                             <div class="team" ><strong>Desarrollo Js - </strong ><a href="https://www.linkedin.com/in/fabricio-chungo-983421b2/">Fabricio Chungo</a><br></br>  </div>
@@ -624,7 +624,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3>Si querés conocer más acerca de sonora no dudes en escribirnos a <a href="mailto:tuterapiasonora@gmail.com">tuterapiasonora@gmail.com</a> o enviarnos un mensaje a nuestro <a href="https://api.whatsapp.com/send?phone=5491160159421&text=Hola" target="_blank">whatsapp.</a></h3>
+                    <h3 >Si querés conocer más acerca de sonora no dudes en escribirnos a <a href="mailto:tuterapiasonora@gmail.com">tuterapiasonora@gmail.com</a> o enviarnos un mensaje a nuestro <a href="https://api.whatsapp.com/send?phone=5491160159421&text=Hola" target="_blank">whatsapp.</a></h3>
                     <h3>Seguinos</h3>
                     <div class="social-container">
                         <span class="fa-stack">
