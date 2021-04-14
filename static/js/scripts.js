@@ -72,8 +72,8 @@
 
                         pause();//Pausa el reproductor
                         stop=1; //Lleva el contador a 0 y lo desactiva
-
-                        }
+                        timer_on=0; //Declara al timer como cortado para evitar que la ventana se cierre una ventana
+                    }
                 }
                 $.magnificPopup.proto.close.call(this);
               };
