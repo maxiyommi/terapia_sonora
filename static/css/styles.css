@@ -1054,13 +1054,12 @@ background-color: #d38157;
 
 	.split{
 		background-color: #1d0b38;
-
-	
+		
 	}
 	
 	.split .area-1 {
     	background-size:cover;
-		width: 90%;
+		width: 100%;
 		height: 30rem;
 		display: inline-block;
 		margin-left:5%;
@@ -1547,6 +1546,7 @@ background-color: #d38157;
 	.split{
 		background-color: #1d0b38;
 		height: 55rem;
+
 		
 	}
 	.split .area-1 {
@@ -1554,7 +1554,6 @@ background-color: #d38157;
 		height: 60rem;
 		width:45%;
 		border-radius: 35px 0px 0px 35px;
-		margin-left:5%;
 		height: 100%;
 	
 	}
