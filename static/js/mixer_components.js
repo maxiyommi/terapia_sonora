@@ -783,37 +783,37 @@ OpenTimer.addEventListener('click', function() {
 }, false);
 
 Timer10.addEventListener('click', function() {
-	var time = "10:00";
+	var time = "00:10:00";
 	playTimer(time)
 }, false);
 
 Timer20.addEventListener('click', function() {
-	var time = "20:00";
+	var time = "00:20:00";
 	playTimer(time)
 }, false);
 
 Timer30.addEventListener('click', function() {
-	var time = "30:00";
+	var time = "00:30:00";
 	playTimer(time)
 }, false);
 
 Timer40.addEventListener('click', function() {
-	var time = "40:00";
+	var time = "00:40:00";
 	playTimer(time)
 }, false);
 
 Timer50.addEventListener('click', function() {
-	var time = "50:00";
+	var time = "00:50:00";
 	playTimer(time)
 }, false);
 
 Timer60.addEventListener('click', function() {
-	var time = "60:00";
+	var time = "00:60:00";
 	playTimer(time)
 }, false);
 
 Timer120.addEventListener('click', function() {
-	var time = "120:00";
+	var time = "02:00:00";
 	playTimer(time)
 }, false);
 
@@ -870,9 +870,14 @@ function initTimer (t) {
    
    var self = this,
        timerEl = document.querySelector('.timer'),
+	   hoursGroupEl = timerEl.querySelector('.hours-group'),
        minutesGroupEl = timerEl.querySelector('.minutes-group'),
        secondsGroupEl = timerEl.querySelector('.seconds-group'),
 
+	   hoursGroup = {
+		firstNum: hoursGroupEl.querySelector('.first'),
+		secondNum: hoursGroupEl.querySelector('.second')
+	 },
        minutesGroup = {
           firstNum: minutesGroupEl.querySelector('.first'),
           secondNum: minutesGroupEl.querySelector('.second')
@@ -884,8 +889,9 @@ function initTimer (t) {
        };
 
    var time = {
-      min: t.split(':')[0],
-      sec: t.split(':')[1]
+	  hour: t.split(':')[0],
+      min: t.split(':')[1],
+      sec: t.split(':')[2]
    };
 
    var timeNumbers;
@@ -895,41 +901,46 @@ function initTimer (t) {
       var timestr;
       var date = new Date();
 
-      date.setHours(0);
+      date.setHours(time.hour);
       date.setMinutes(time.min);
       date.setSeconds(time.sec);
 
       var newDate = new Date(date.valueOf() - 1000);
       var temp = newDate.toTimeString().split(" ");
       var tempsplit = temp[0].split(':');
-
+	  console.log(tempsplit)
+	  time.hour = tempsplit[0]
       time.min = tempsplit[1];
       time.sec = tempsplit[2];
 
 	  if (stop==1){
+		  time.hour="00"
 		  time.min="00"
 		  time.sec="00"
+
 	  }
-      timestr = time.min + time.sec;
+      timestr = time.hour + time.min + time.sec;
       timeNumbers = timestr.split('');
 	  console.log(timeNumbers)
 
       updateTimerDisplay(timeNumbers);
 
-      if(timestr === '0000')
+      if(timestr === '000000')
         countdownFinished();
 
-	  if(timestr != '0000')
+	  if(timestr != '000000')
         setTimeout(updateTimer, 1000);
 
    }
 
    function updateTimerDisplay(arr) {
 
-      animateNum(minutesGroup.firstNum, arr[0]);
-      animateNum(minutesGroup.secondNum, arr[1]);
-      animateNum(secondsGroup.firstNum, arr[2]);
-      animateNum(secondsGroup.secondNum, arr[3]);
+      animateNum(hoursGroup.firstNum, arr[0]);
+      animateNum(hoursGroup.secondNum, arr[1]);
+      animateNum(minutesGroup.firstNum, arr[2]);
+      animateNum(minutesGroup.secondNum, arr[3]);
+	  animateNum(secondsGroup.firstNum, arr[4]);
+      animateNum(secondsGroup.secondNum, arr[5]);
 
    }
 

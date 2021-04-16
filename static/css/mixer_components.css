@@ -1095,7 +1095,7 @@ This is for a future button of mute
     .timer--clock {
         width: 100%;
         position: relative;
-        padding-left: 10%;
+        padding-left: 5%;
         margin-top: 10%;
         overflow: hidden;
         text-align: center;
@@ -1107,29 +1107,22 @@ This is for a future button of mute
     .timer--clock .clock-display-grp .number-grp {
         width: auto;
         display: block;
-        height: 80px; 
+        height: 55px; 
         float: left;
         overflow: hidden;
    }
     .timer--clock .clock-display-grp .number-grp .number-grp-wrp .num p {
         width: auto;
         display: table;
-        font-size: 80px;
-        line-height: 90px;
+        font-size: 50px;
+        line-height: 70px;
         font-weight: bold;
    }
    .timer--clock .clock-separator p {
         width: auto;
         display: table;
-        font-size: 70px;
+        font-size: 50px;
         line-height: 70px;
-        font-weight: bold;
-    }
-    .timer--clock .clock-separator p {
-        width: auto;
-        display: table;
-        font-size: 70px;
-        line-height: 80px;
         font-weight: bold;
     }
 
@@ -1137,15 +1130,15 @@ This is for a future button of mute
         width: auto;
         float: left;
         display: block;
-        height: 156px;
+        height: 100px;
     }
 }
 
 @media (min-width: 550px) {
        /* For PC*/
        .timer {
-        width: 90%;
-        height: 60%;
+        width: 100%;
+        height: 40%;
         display: block;
         position: relative;
         margin-top:-40%;
@@ -1174,22 +1167,22 @@ This is for a future button of mute
     .timer--clock .clock-display-grp .number-grp {
         width: auto;
         display: block;
-        height: 156px;
+        height: 105px;
         float: left;
         overflow: hidden;
    }
    .timer--clock .clock-display-grp .number-grp .number-grp-wrp .num p {
         width: auto;
         display: table;
-        font-size: 140px;
-        line-height: 150px;
+        font-size: 100px;
+        line-height: 110px;
         font-weight: bold;
     }
     .timer--clock .clock-separator p {
         width: auto;
         display: table;
-        font-size: 150px;
-        line-height: 150px;
+        font-size: 100px;
+        line-height: 110px;
         font-weight: bold;
     }
 
