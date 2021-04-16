@@ -9,10 +9,11 @@ Table Of Contents:
 - slider_pink
 - slider_white
 - slider_narrow 
+- button_narrow
 - slider_tonegen
 - slider_rain
 - slider_heavyRain
-
+- 
 - control
 - lightbox timer
 ******************************************/
@@ -21,7 +22,6 @@ Table Of Contents:
 /*********************/
 /*   slider_pink     */
 /*********************/
-
 .slider_pink {
     background-color: transparent;
     height: 80px;
@@ -66,7 +66,7 @@ Table Of Contents:
 	position: relative;
     width: 10%;
 	height: 12%;
-  }
+}
 
 .slider_pink .value_pink_dbfs {
     background-color: transparent;
@@ -77,7 +77,7 @@ Table Of Contents:
     font-size: 85%;
     color:#292430;
     user-select: text;
-  }
+}
 /*
 This is for a future button of mute
 .slider_pink .switch_pink {
@@ -90,7 +90,6 @@ This is for a future button of mute
 /*********************/
 /*   slider_white    */
 /*********************/
-
 .slider_white {
     background-color: transparent;
     height: 80px;
@@ -135,7 +134,7 @@ This is for a future button of mute
 	position: relative;
     width: 10%;
     height: 12%;
-  }
+}
 
 .slider_white .value_white_dbfs {
   background-color: transparent;
@@ -146,9 +145,6 @@ This is for a future button of mute
   font-size: 85%;
   color:#292430;
   user-select: text;
-
-
-
 }
 /*
 This is for a future button of mute
@@ -162,7 +158,6 @@ This is for a future button of mute
 /*********************/
 /*   slider_narrow   */
 /*********************/
-
 /* Everything about the Narrow */
 .slider_narrow {
     background-color: transparent;
@@ -172,7 +167,6 @@ This is for a future button of mute
     margin-left: 4%;
     align-items: center;
 }
-
 
 /*
 Text or future icon of narrow
@@ -189,10 +183,9 @@ Text or future icon of narrow
     user-select: text;
 }
 
-
-/*
-Narrow slider
-*/
+/*********************/
+/*   Narrow slider   */
+/*********************/
 .slider_narrow .input_range_narrow {
     background-color: transparent;
     text-align: center;
@@ -214,8 +207,7 @@ Narrow slider
     width: 10%;
 	height: 12%;
     user-select: text;
-
-  }
+}
 
 .slider_narrow .value_narrow_dbfs {
     background-color: transparent;
@@ -225,10 +217,8 @@ Narrow slider
     font: 600 1rem/1rem 'Jost', sans-serif;
     font-size: 85%;
     color:#292430;
-    user-select: text; 
-  
-  
-  }
+    user-select: text;  
+}
 
 /*
 This is for a future button of mute
@@ -241,6 +231,9 @@ This is for a future button of mute
 
 }*/
 
+/*********************/
+/*   button_narrow   */
+/*********************/
 .button_narrow1 {
     /*
     Primera fila de botones
@@ -253,8 +246,6 @@ This is for a future button of mute
     margin-bottom: 5%;
     align-items: center;
 }
-
-
 
 .button_narrow1 .button_narrow250 {
     background-color: #d38157;
@@ -269,7 +260,6 @@ This is for a future button of mute
     margin-left: 2%;
     padding: 7px;
 }
-
 
 .button_narrow1 .button_narrow500 {
     /*
@@ -303,7 +293,6 @@ This is for a future button of mute
     padding: 7px;
 }
 
-
 .button_narrow1 .button_narrow2k {
     background-color: #d38157;
     text-align: center;
@@ -318,7 +307,6 @@ This is for a future button of mute
     border-radius: 12px;
 }
 
-
 .button_narrow2 {
     /*
     Segunda fila de botones
@@ -331,7 +319,6 @@ This is for a future button of mute
     margin-bottom: 5%;
     align-items: center;
 }
-
 
 .button_narrow2 .button_narrow3k {
     background-color: #d38157;
@@ -747,7 +734,6 @@ This is for a future button of mute
 /*********************/
 /*   slider_water    */
 /*********************/
-
 .slider_water {
     background-color: transparent;
     height: 80px;
@@ -756,7 +742,6 @@ This is for a future button of mute
     margin-left: 4%;
     margin-top: 1%;
     align-items: center;
-    
 }
 
 
@@ -771,7 +756,6 @@ This is for a future button of mute
     background-color: transparent;
     text-align: center;
     width: 55%;
-
 }
 
 .slider_water .value_water {
@@ -788,7 +772,7 @@ This is for a future button of mute
 	position: relative;
     width: 10%;
 	height: 12%;
-  }
+}
 
 .slider_water .value_water_dbfs {
   background-color: transparent;
@@ -799,7 +783,6 @@ This is for a future button of mute
   font-size: 85%;
   color:#292430;
   user-select: text;
-
 }
 /*
 This is for a future button of mute
@@ -840,7 +823,6 @@ This is for a future button of mute
     margin-right: 5%;
 }
 
-
 .control .pause{
     /* Properties of pause */
     position: relative;
@@ -851,6 +833,7 @@ This is for a future button of mute
 .label_timer{
     display:block;
 }
+
 @media (min-width: 992px) {
     /* For PC*/
     .control .terapia{
@@ -869,7 +852,6 @@ This is for a future button of mute
     }
 }
 
-
 @media (min-width: 250px) {
     /* For Mobile*/
     .control .terapia{
@@ -887,6 +869,7 @@ This is for a future button of mute
         padding: 10px;
     }
 }
+
 @media (min-width: 400px) {
     /* For Mobile*/
     .control .terapia{
@@ -918,8 +901,6 @@ This is for a future button of mute
     margin-left: 13%;
     align-items: center;
 }
-
-
 
 .button_timer1 .button_timer10 {
     background-color: #d38157;
@@ -1022,7 +1003,6 @@ This is for a future button of mute
     border-radius: 12px;
 }
 
-
 .button_timer3 {
     /*
     Third row buttons 
@@ -1051,10 +1031,9 @@ This is for a future button of mute
 }
 
 
-    
-
-    
- /*================= * TIMER *=================*/
+/*********************/
+/*      Timer        */
+/*********************/
     * {
         margin: 0;
         padding: 0;
@@ -1071,8 +1050,6 @@ This is for a future button of mute
         color: white;
    }
   
-    
-   
 @media (min-width: 250px) {
     /* For Mobile*/
     .timer {
@@ -1196,11 +1173,11 @@ This is for a future button of mute
     }
 }
 
-
 .timer--clock .clock-display-grp .number-grp .number-grp-wrp {
     width: 100%;
     position: relative;
 }
+
 .timer--clock .clock-display-grp .number-grp .number-grp-wrp .num {
     width: 100%;
     position: relative;
@@ -1219,6 +1196,7 @@ This is for a future button of mute
     padding-top: 25px;
     float: left;
 }
+
 .reload {
     width: 125px;
     height: 14px;
@@ -1231,18 +1209,22 @@ This is for a future button of mute
     cursor: pointer;
     z-index: 9999;
 }
+
 .reload:hover svg path {
     fill: #666;
 }
+
 .reload:hover p {
     color: #666;
 }
+
 .reload svg {
     width: 12px;
     height: 12px;
     float: left;
     margin-right: 10px;
 }
+
 .reload p {
     color: #2b2b2b;
     font-size: 12px;
