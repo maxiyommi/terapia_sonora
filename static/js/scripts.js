@@ -81,9 +81,6 @@
           }
         });
 
-
-
-
     /* Video Lightbox - Magnific Popup */
     $('.popup-youtube, .popup-vimeo').magnificPopup({
         disableOn: 700,
@@ -101,7 +98,7 @@
                         if ( !m || !m[1] ) return null;
                         return m[1];
                     },
-                    src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+                    src: 'https://www.youtube.com/embed/U5oryMyVpVE'
                 },
                 vimeo: {
                     index: 'vimeo.com/', 
