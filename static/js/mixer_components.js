@@ -6,7 +6,7 @@ const volumeControlPink = document.querySelector('[data-action="volume-pink"]');
 const onOffSwitchPink = document.querySelector('.switch_pink');
 
 const gainNodePink = new Tone.Gain(0.05);
-const noisePink = new Tone.Player("./static/media/audio/pinkNoise.wav");
+const noisePink = new Tone.Player("./static/media/audio/pinkNoise.flac");
 noisePink.loop = true;
 gainNodePink.gain.value = 0;
 noisePink.connect(gainNodePink);
@@ -65,7 +65,7 @@ const volumeControlWhite = document.querySelector('[data-action="volume-white"]'
 const onOffSwitchWhite = document.querySelector('.switch_white');
 
 const gainNodeWhite = new Tone.Gain(0.5);
-const noiseWhite = new Tone.Player("./static/media/audio/whiteNoise.wav");
+const noiseWhite = new Tone.Player("./static/media/audio/whiteNoise.flac");
 noiseWhite.loop = true;
 gainNodeWhite.gain.value = 0;
 noiseWhite.connect(gainNodeWhite);
@@ -142,20 +142,20 @@ const Narrow12k = document.querySelector('[data-action="narrow12k"]');
 const gainNodeNarrow = new Tone.Gain(0.5);
 
 /* First it set the 500 narrowband */
-var noiseNarrow = new Tone.Player("./static/media/audio/narrowband500.wav");
+var noiseNarrow = new Tone.Player("./static/media/audio/narrowband500.flac");
 noiseNarrow.loop = true;
 
 /* Second it load the rest and save it in a buffer */
-const buffer250 = new Tone.Buffer("./static/media/audio/narrowband250.wav");
-const buffer500 = new Tone.Buffer("./static/media/audio/narrowband500.wav");
-const buffer1k = new Tone.Buffer("./static/media/audio/narrowband1k.wav");
-const buffer2k = new Tone.Buffer("./static/media/audio/narrowband2k.wav");
-const buffer3k = new Tone.Buffer("./static/media/audio/narrowband3k.wav");
-const buffer4k = new Tone.Buffer("./static/media/audio/narrowband4k.wav");
-const buffer6k = new Tone.Buffer("./static/media/audio/narrowband6k.wav");
-const buffer8k = new Tone.Buffer("./static/media/audio/narrowband8k.wav");
-const buffer10k = new Tone.Buffer("./static/media/audio/narrowband10k.wav");
-const buffer12k = new Tone.Buffer("./static/media/audio/narrowband12k.wav");
+const buffer250 = new Tone.Buffer("./static/media/audio/narrowband250.flac");
+const buffer500 = new Tone.Buffer("./static/media/audio/narrowband500.flac");
+const buffer1k = new Tone.Buffer("./static/media/audio/narrowband1k.flac");
+const buffer2k = new Tone.Buffer("./static/media/audio/narrowband2k.flac");
+const buffer3k = new Tone.Buffer("./static/media/audio/narrowband3k.flac");
+const buffer4k = new Tone.Buffer("./static/media/audio/narrowband4k.flac");
+const buffer6k = new Tone.Buffer("./static/media/audio/narrowband6k.flac");
+const buffer8k = new Tone.Buffer("./static/media/audio/narrowband8k.flac");
+const buffer10k = new Tone.Buffer("./static/media/audio/narrowband10k.flac");
+const buffer12k = new Tone.Buffer("./static/media/audio/narrowband12k.flac");
 
 gainNodeNarrow.gain.value = 0;
 noiseNarrow.connect(gainNodeNarrow);
@@ -544,7 +544,7 @@ const volumeControlRain = document.querySelector('[data-action="volume-rain"]');
 const onOffSwitchRain = document.querySelector('.switch_rain');
 
 const gainNodeRain = new Tone.Gain(0.5);
-const buff = new Tone.Buffer("./static/media/audio/Rain.wav");
+const buff = new Tone.Buffer("./static/media/audio/Rain.flac");
 var noiseRain = new Tone.Player(buff);
 noiseRain.loop = true;
 
@@ -608,7 +608,7 @@ const onOffSwitchHeavyRain = document.querySelector('.switch_heavyRain');
 
 const gainNodeHeavyRain = new Tone.Gain(0.5);
 var norm = new Tone.Normalize(0, 1);
-const noiseHeavyRain = new Tone.Player("./static/media/audio/heavyRain.wav").connect(norm);
+const noiseHeavyRain = new Tone.Player("./static/media/audio/heavyRain.flac").connect(norm);
 noiseHeavyRain.loop = true;
 
 
@@ -677,7 +677,7 @@ const volumeControlWater = document.querySelector('[data-action="volume-water"]'
 const onOffSwitchWater = document.querySelector('.switch_water');
 
 const gainNodeWater = new Tone.Gain(0.5);
-const noiseWater = new Tone.Player("./static/media/audio/Water.wav");
+const noiseWater = new Tone.Player("./static/media/audio/Water.flac");
 noiseWater.loop = true;
 
 gainNodeWater.gain.value = 0;
