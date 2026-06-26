@@ -48,8 +48,7 @@ mixer no descarga audio.
 
 ## Pendiente de decisión humana (no bloquea la entrega)
 
-- **Rain y Water**: se pasaron a mono por la regla "L=R en todos los audios"; si se prefiere
-  conservar el estéreo de ambiente, se revierten solo esos dos. Ver `audit/audio.md`.
+- **Rain y Water**: confirmado en **mono** (decisión clínica). Todos los audios quedan L=R.
 - **Loops** de ruidos estacionarios (Water/heavyRain/Rain): gran ahorro extra, requiere
   validación clínica de que el loop no introduce artefactos.
 

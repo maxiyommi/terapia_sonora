@@ -47,9 +47,9 @@ Todas en ~−12 dB (mean): 250 (−12,6), 500 (−12,3), 1k (−12,2), 2k (−12
 ## Notas / pendientes
 
 - **Rain y Water** eran grabaciones **estéreo** (ambiente: lluvia y agua). Siguiendo la
-  regla "L y R al mismo nivel en todos los audios" también se pasaron a **mono**. Si para
-  esos dos sonidos de ambiente preferís conservar el estéreo (imagen espacial), avisá y los
-  revierto a estéreo FLAC (solo esos dos). Los másters originales están intactos.
+  regla "L y R al mismo nivel en todos los audios" se pasaron a **mono**. Confirmado por
+  decisión clínica (se quedan en mono). Los másters estéreo originales siguen en
+  `audio_source/` por si en el futuro se quisieran recuperar.
 - **Loops** de ruidos estacionarios (Water/heavyRain/Rain): ahorro adicional posible
   recortando a ~20–30 s con crossfade; requiere validación de que el loop no introduce
   artefactos (T2.5, opcional).
