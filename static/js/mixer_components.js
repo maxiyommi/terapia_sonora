@@ -12,7 +12,6 @@ gainNodePink.gain.value = 0;
 noisePink.connect(gainNodePink);
 gainNodePink.connect(audioCtx.destination);
 
-console.log(audioCtx.state);
 timer_on=0;
 sliderPink.oninput = function(){
     numberPink.innerHTML = sliderPink.value;
@@ -22,14 +21,12 @@ volumeControlPink.addEventListener('input', function() {
 
     if (this.value != -60) {
 		gainNodePink.gain.value =  Math.pow(10, this.value / 20);
-		console.log(Math.pow(10, this.value / 20));
 		}
 		else {
 			gainNodePink.gain.value = 0;
 		}
 	
 		if (gainNodePink.gain.value < 0.0011) {
-			console.log("entra");
 			document.getElementById("infinity_pink").style.display = "block";
 			document.getElementById("value_pink").style.display = "none";
 	
@@ -54,7 +51,6 @@ onOffSwitchPink.addEventListener('change', function() {
 		}
 		this.dataset.power = 'on';
 	}
-	console.log(this.dataset);
 
     let state = this.getAttribute('aria-checked') === "false" ? true : false;
 	this.setAttribute( 'aria-checked', state ? "true" : "false" );
@@ -75,7 +71,6 @@ gainNodeWhite.gain.value = 0;
 noiseWhite.connect(gainNodeWhite);
 gainNodeWhite.connect(audioCtx.destination);
 
-console.log(audioCtx.state);
 
 sliderWhite.oninput = function(){
 	
@@ -86,7 +81,6 @@ sliderWhite.oninput = function(){
 volumeControlWhite.addEventListener('input', function() {
 	if (this.value != -60) {
     gainNodeWhite.gain.value =  Math.pow(10, this.value / 20);
-    console.log(Math.pow(10, this.value / 20));
 	}
 	else {
 		gainNodeWhite.gain.value = 0;
@@ -120,7 +114,6 @@ onOffSwitchWhite.addEventListener('change', function() {
 		}
 		this.dataset.power = 'on';
 	}
-	console.log(this.dataset);
 
     let state = this.getAttribute('aria-checked') === "false" ? true : false;
 	this.setAttribute( 'aria-checked', state ? "true" : "false" );
@@ -168,7 +161,6 @@ gainNodeNarrow.gain.value = 0;
 noiseNarrow.connect(gainNodeNarrow);
 gainNodeNarrow.connect(audioCtx.destination);
 
-console.log(audioCtx.state);
 
 sliderNarrow.oninput = function(){
 	
@@ -189,11 +181,9 @@ Narrow250.addEventListener('click', function() {
 			*/
 			noiseNarrow.stop();
 			noiseNarrow = new Tone.Player(buffer250);
-			console.log("buffer250");
 			noiseNarrow.loop = true;
 			noiseNarrow.connect(gainNodeNarrow);
 			gainNodeNarrow.connect(audioCtx.destination);
-			console.log("2501");
 			noiseNarrow.start();
 		}
 		else{
@@ -201,7 +191,6 @@ Narrow250.addEventListener('click', function() {
 			noiseNarrow.loop = true;
 			noiseNarrow.connect(gainNodeNarrow);
 			gainNodeNarrow.connect(audioCtx.destination);
-			console.log("2502");
 		}
 
 }, false);
@@ -218,14 +207,12 @@ Narrow500.addEventListener('click', function() {
 			noiseNarrow.connect(gainNodeNarrow);
 			gainNodeNarrow.connect(audioCtx.destination);
 			noiseNarrow.start();
-			console.log("500");
 		}
 		else{
 			noiseNarrow = new Tone.Player(buffer500);
 			noiseNarrow.loop = true;
 			noiseNarrow.connect(gainNodeNarrow);
 			gainNodeNarrow.connect(audioCtx.destination);
-			console.log("500");
 			
 	}
 }, false);
@@ -243,21 +230,18 @@ Narrow1k.addEventListener('click', function() {
 			noiseNarrow.connect(gainNodeNarrow);
 			gainNodeNarrow.connect(audioCtx.destination);
 			noiseNarrow.start();
-			console.log("1k");
 		} 
 		else{
 			noiseNarrow = new Tone.Player(buffer1k);
 			noiseNarrow.loop = true;
 			noiseNarrow.connect(gainNodeNarrow);
 			gainNodeNarrow.connect(audioCtx.destination);
-			console.log("1k");
 
 		}
 	}, false);
 
 Narrow2k.addEventListener('click', function() {
 	color("button_narrow2k")
-	console.log("2k");	
 		if (playButton.dataset.playing === 'true'){	
 			/*
 			Ask if the button play is played
@@ -279,7 +263,6 @@ Narrow2k.addEventListener('click', function() {
 
 Narrow3k.addEventListener('click', function() {
 	color("button_narrow3k")
-	console.log("3k");	
 		if (playButton.dataset.playing === 'true'){	
 			/*
 			Ask if the button play is played
@@ -302,7 +285,6 @@ Narrow3k.addEventListener('click', function() {
 
 Narrow4k.addEventListener('click', function() {
 	color("button_narrow4k")
-	console.log("4k");	
 		if (playButton.dataset.playing === 'true'){	
 			/*
 			Ask if the button play is played
@@ -324,7 +306,6 @@ Narrow4k.addEventListener('click', function() {
 
 Narrow6k.addEventListener('click', function() {
 	color("button_narrow6k")
-	console.log("6k");	
 		if (playButton.dataset.playing === 'true'){	
 			/*
 			Ask if the button play is played
@@ -347,7 +328,6 @@ Narrow6k.addEventListener('click', function() {
 
 Narrow8k.addEventListener('click', function() {
 	color("button_narrow8k")
-	console.log("8k");	
 		if (playButton.dataset.playing === 'true'){	
 			/*
 			Ask if the button play is played
@@ -369,7 +349,6 @@ Narrow8k.addEventListener('click', function() {
 
 Narrow10k.addEventListener('click', function() {
 	color("button_narrow10k")
-	console.log("10k");	
 		if (playButton.dataset.playing === 'true'){	
 			/*
 			Ask if the button play is played
@@ -391,7 +370,6 @@ Narrow10k.addEventListener('click', function() {
 
 Narrow12k.addEventListener('click', function() {
 	color("button_narrow12k")
-	console.log("12k");	
 		if (playButton.dataset.playing === 'true'){	
 			/*
 			Ask if the button play is played
@@ -442,7 +420,6 @@ volumeControlNarrow.addEventListener('input', function() {
 
     if (this.value != -60) {
 		gainNodeNarrow.gain.value =  Math.pow(10, this.value / 20);
-		console.log(Math.pow(10, this.value / 20));
 		}
 		else {
 			gainNodeNarrow.gain.value = 0;
@@ -474,7 +451,6 @@ onOffSwitchNarrow.addEventListener('change', function() {
 		}
 		this.dataset.power = 'on';
 	}
-	console.log(this.dataset);
 
     let state = this.getAttribute('aria-checked') === "false" ? true : false;
 	this.setAttribute( 'aria-checked', state ? "true" : "false" );
@@ -512,7 +488,6 @@ sliderTonegenFreq.oninput = function(){
 volumeControlTonegen.addEventListener('input', function() {
 	if (this.value != -60) {
     gainNodeTonegen.gain.value =  Math.pow(10, this.value / 20);
-    console.log(Math.pow(10, this.value / 20));
 	}
 	else {
 		gainNodeTonegen.gain.value = 0;
@@ -533,7 +508,6 @@ volumeControlTonegen.addEventListener('input', function() {
 freqControlTonegen.addEventListener('input', function() {
 
     noiseTonegen.set({frequency: this.value});
-    console.log(noiseTonegen.frequency._initialValue);
 
 }, false);
 /*
@@ -551,7 +525,6 @@ onOffSwitchTonegen.addEventListener('change', function() {
 		}
 		this.dataset.power = 'on';
 	}
-	console.log(this.dataset);
 
     let state = this.getAttribute('aria-checked') === "false" ? true : false;
 	this.setAttribute( 'aria-checked', state ? "true" : "false" );
@@ -580,7 +553,6 @@ gainNodeRain.gain.value = 0;
 
 noiseRain.connect(gainNodeRain);
 gainNodeRain.connect(audioCtx.destination);
-console.log(audioCtx.state);
 
 sliderRain.oninput = function(){
     numberRain.innerHTML = sliderRain.value;
@@ -589,7 +561,6 @@ sliderRain.oninput = function(){
 volumeControlRain.addEventListener('input', function() {
 	if (this.value != -60) {
     gainNodeRain.gain.value =  Math.pow(10, this.value / 20);
-    console.log(Math.pow(10, this.value / 20));
 	}
 	else {
 		gainNodeRain.gain.value = 0;
@@ -621,7 +592,6 @@ onOffSwitchRain.addEventListener('change', function() {
 		}
 		this.dataset.power = 'on';
 	}
-	console.log(this.dataset);
 
     let state = this.getAttribute('aria-checked') === "false" ? true : false;
 	this.setAttribute( 'aria-checked', state ? "true" : "false" );
@@ -645,7 +615,6 @@ noiseHeavyRain.loop = true;
 gainNodeHeavyRain.gain.value = 0;
 noiseHeavyRain.connect(gainNodeHeavyRain);
 gainNodeHeavyRain.connect(audioCtx.destination);
-console.log(audioCtx.state);
 
 sliderHeavyRain.oninput = function(){
     numberHeavyRain.innerHTML = sliderHeavyRain.value;
@@ -654,7 +623,6 @@ sliderHeavyRain.oninput = function(){
 volumeControlHeavyRain.addEventListener('input', function() {
 	if (this.value != -60) {
     gainNodeHeavyRain.gain.value =  Math.pow(10, this.value / 20);
-    console.log(Math.pow(10, this.value / 20));
 	}
 	else {
 		gainNodeHeavyRain.gain.value = 0;
@@ -687,7 +655,6 @@ onOffSwitchHeavyRain.addEventListener('change', function() {
 		}
 		this.dataset.power = 'on';
 	}
-	console.log(this.dataset);
 
     let state = this.getAttribute('aria-checked') === "false" ? true : false;
 	this.setAttribute( 'aria-checked', state ? "true" : "false" );
@@ -716,7 +683,6 @@ noiseWater.loop = true;
 gainNodeWater.gain.value = 0;
 noiseWater.connect(gainNodeWater);
 gainNodeWater.connect(audioCtx.destination);
-console.log(audioCtx.state);
 sliderWater.oninput = function(){
     numberWater.innerHTML = sliderWater.value;
 }
@@ -724,7 +690,6 @@ sliderWater.oninput = function(){
 volumeControlWater.addEventListener('input', function() {
 	if (this.value != -60) {
     gainNodeWater.gain.value =  Math.pow(10, this.value / 20);
-    console.log(Math.pow(10, this.value / 20));
 	}
 	else {
 		gainNodeWater.gain.value = 0;
@@ -758,7 +723,6 @@ onOffSwitchWater.addEventListener('change', function() {
 		}
 		this.dataset.power = 'on';
 	}
-	console.log(this.dataset);
 
     let state = this.getAttribute('aria-checked') === "false" ? true : false;
 	this.setAttribute( 'aria-checked', state ? "true" : "false" );
@@ -818,7 +782,6 @@ Timer120.addEventListener('click', function() {
 }, false);
 
 function playTimer(time){
-	console.log(time);
 	timer(0)
 	initTimer(time);
 	play();
@@ -908,7 +871,6 @@ function initTimer (t) {
       var newDate = new Date(date.valueOf() - 1000);
       var temp = newDate.toTimeString().split(" ");
       var tempsplit = temp[0].split(':');
-	  console.log(tempsplit)
 	  time.hour = tempsplit[0]
       time.min = tempsplit[1];
       time.sec = tempsplit[2];
@@ -921,7 +883,6 @@ function initTimer (t) {
 	  }
       timestr = time.hour + time.min + time.sec;
       timeNumbers = timestr.split('');
-	  console.log(timeNumbers)
 
       updateTimerDisplay(timeNumbers);
 

@@ -26,8 +26,6 @@ function play () {
 
     // play or pause track depending on state
 
-    console.log("play play")
-    console.log(audioCtx.state);
     noisePink.start();
     noiseWhite.start();
     noiseNarrow.start();
@@ -53,8 +51,6 @@ function pause () {
         audioCtx.resume();
     }
 
-    console.log("stop stop")
-    console.log(audioCtx.state);
     noisePink.stop();
     noiseWhite.stop();
     noiseNarrow.stop();
