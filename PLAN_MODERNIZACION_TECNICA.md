@@ -2,7 +2,7 @@
 
 > **Tipo:** Plan ejecutable por un squad de agentes (Claude Code).
 > **Creado:** 2026-06-26
-> **Estado:** `PENDIENTE` (no iniciado)
+> **Estado:** `COMPLETADO` (2026-06-26) — resultados en `audit/final.md`. Pendiente solo: merge humano + decisiones clínicas opcionales (downmix mono / loops / narrowband8k).
 > **Alcance:** SOLO actualización tecnológica, rendimiento, seguridad y buenas prácticas.
 > **Restricción dura:** impacto **cero** en diseño visual y en features. Nada de rediseños, nada de funciones nuevas.
 
@@ -245,48 +245,48 @@ $B screenshot /tmp/después.png # comparar contra baseline
 ## 9. Checklist de progreso (idempotente — marcar al completar)
 
 **Fase 0 — Setup**
-- [ ] T0.1 rama creada
-- [ ] T0.2 herramientas verificadas
-- [ ] T0.3 baseline + screenshots
+- [x] T0.1 rama creada
+- [x] T0.2 herramientas verificadas
+- [x] T0.3 baseline + screenshots
 
 **Fase 1 — Quick wins / seguridad**
-- [ ] T1.1 bootstrap.min.css
-- [ ] T1.2 morphext.css duplicado eliminado
-- [ ] T1.3 console.log eliminados
-- [ ] T1.4 FontAwesome solo woff2 + limpieza webfonts
-- [ ] T1.5 imágenes optimizadas
-- [ ] T1.6 og:image arreglado
-- [ ] T1.7 meta description
-- [ ] T1.8 apple-touch-icon / canonical
-- [ ] T1.9 robots.txt + sitemap.xml
-- [ ] T1.10 SRI en CDN
-- [ ] T1.11 GSAP 3.12.5
-- [ ] T1.12 revisión de secretos
-- [ ] Gate F1 verde
+- [x] T1.1 bootstrap.min.css
+- [x] T1.2 morphext.css duplicado eliminado
+- [x] T1.3 console.log eliminados
+- [x] T1.4 FontAwesome solo woff2 + limpieza webfonts
+- [x] T1.5 imágenes optimizadas
+- [x] T1.6 og:image arreglado
+- [x] T1.7 meta description
+- [x] T1.8 apple-touch-icon / canonical
+- [x] T1.9 robots.txt + sitemap.xml
+- [x] T1.10 SRI en CDN
+- [x] T1.11 GSAP 3.12.5
+- [x] T1.12 revisión de secretos
+- [x] Gate F1 verde
 
 **Fase 2 — Audio**
-- [ ] T2.1 backup audio_source/
-- [ ] T2.2 medición individual
-- [ ] T2.3 conversión a FLAC
-- [ ] T2.4 verificación losslessness
-- [ ] T2.5 (opcional) loops — requiere OK clínico
-- [ ] T2.6 rutas .wav→.flac en JS
-- [ ] T2.7 reporte audio.md
-- [ ] Gate F2 verde
+- [x] T2.1 backup audio_source/
+- [x] T2.2 medición individual
+- [x] T2.3 conversión a FLAC
+- [x] T2.4 verificación losslessness
+- [ ] T2.5 (opcional) loops — PENDIENTE OK clínico (Magali)
+- [x] T2.6 rutas .wav→.flac en JS
+- [x] T2.7 reporte audio.md
+- [x] Gate F2 verde
 
 **Fase 3 — Performance / PWA**
-- [ ] T3.1 lazy loading
-- [ ] T3.2 resource hints
-- [ ] T3.3 manifest.json
-- [ ] T3.4 service worker
-- [ ] Gate F3 verde
+- [x] T3.1 lazy loading
+- [x] T3.2 resource hints
+- [x] T3.3 manifest.json
+- [x] T3.4 service worker
+- [x] Gate F3 verde
 
 **Fase 4 — QA integral / cierre**
-- [ ] T4.1 QA integral
-- [ ] T4.2 regresión visual final
-- [ ] T4.3 métricas finales
-- [ ] T4.4 plan actualizado
-- [ ] T4.5 entrega lista
+- [x] T4.1 QA integral
+- [x] T4.2 regresión visual final
+- [x] T4.3 métricas finales
+- [x] T4.4 plan actualizado
+- [x] T4.5 entrega lista
 
 ---
 
