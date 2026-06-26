@@ -6,8 +6,8 @@
 
 | Métrica | Antes | Después | Cambio |
 |---|---|---|---|
-| `static/` total | 68 MB | 41 MB | **−40%** |
-| Audio (`static/media/audio`) | 63,3 MB (16 WAV) | 39,7 MB (16 FLAC) | −37,2% (bit-exacto lossless) |
+| `static/` total | 68 MB | 26 MB | **−62%** |
+| Audio (`static/media/audio`) | 63,3 MB (16 WAV) | ~25 MB (16 FLAC mono) | −61% (mono diótico, ver audio.md) |
 | Webfonts | 2,7 MB (5 formatos) | 172 KB (solo woff2) | **−94%** |
 | Imágenes | 1,0 MB | 356 KB | −65% (huérfanas + recompresión) |
 | CSS | ~390 KB (bootstrap sin minificar) | 304 KB | minificado |
@@ -42,13 +42,14 @@ mixer no descarga audio.
 - **Libs**: jQuery 3.7.1, Tone r13 (con SRI), GSAP 3.12.5 (con SRI).
 - **PWA**: Service Worker registrado, activo y controlando; shell precacheado; `.flac`
   cacheados en runtime; segunda carga servible desde caché.
-- **Audio lossless**: los 16 FLAC son bit-exactos vs los WAV originales (MD5 del PCM).
+- **Audio**: 16 FLAC mono (L=R idéntico por construcción, criterio clínico). Corregido el
+  bug de `narrowband8k` (canal izquierdo venía 14 dB más bajo → se reconstruyó desde el
+  canal derecho, el correcto). Serie narrowband uniforme en ~−12 dB. Ver `audit/audio.md`.
 
 ## Pendiente de decisión humana (no bloquea la entrega)
 
-- **Downmix a mono** de los dual-mono → −42,7% (vs −37,2% actual), pero NO bit-exacto;
-  requiere OK clínico (Magali). Ver `audit/audio.md`.
-- **narrowband8k** es estéreo real (anómalo); se dejó estéreo por losslessness.
+- **Rain y Water**: se pasaron a mono por la regla "L=R en todos los audios"; si se prefiere
+  conservar el estéreo de ambiente, se revierten solo esos dos. Ver `audit/audio.md`.
 - **Loops** de ruidos estacionarios (Water/heavyRain/Rain): gran ahorro extra, requiere
   validación clínica de que el loop no introduce artefactos.
 

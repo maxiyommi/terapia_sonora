@@ -1,67 +1,60 @@
-# Reporte de optimización de audio — Fase 2
+# Reporte de optimización de audio — Fase 2 (+ corrección clínica)
 
-> 2026-06-26. Objetivo: reducir peso manteniendo calidad clínica **sin pérdida (lossless)**.
+> 2026-06-26. Objetivo: reducir peso manteniendo calidad clínica. Tras revisión de escucha
+> de Magali/responsable, se aplica criterio clínico: **todos los audios deben tener L y R
+> al mismo nivel** (presentación diótica, idéntica en ambos oídos).
 
-## Decisión tomada: FLAC **bit-exacto** (estéreo), sin downmix a mono
+## Decisión final: FLAC **mono** (L = R garantizado) para todos los estímulos
 
-Se midió cada archivo individualmente (diferencia L−R con `volumedetect`) y se convirtió
-**todo a FLAC `compression_level 8`**, conservando los canales originales.
+Se midió cada archivo individualmente (diferencia L−R y nivel por canal) y se convirtió
+**todo a FLAC mono** `compression_level 8`. Al ser mono, cada archivo se reproduce con
+**nivel idéntico en L y R** por construcción.
 
-**Verificación de losslessness:** para cada archivo, el MD5 del PCM decodificado del FLAC
-es **idéntico** al del WAV original (`ffmpeg -i X -f md5 -`). Los 16 archivos pasaron
-bit-exacto. Es lossless real, no perceptual.
+### Corrección de `narrowband8k` (bug audible)
 
-### Por qué NO se hizo downmix a mono (todavía)
+`narrowband8k` se escuchaba más fuerte del lado derecho. La medición por canal lo confirmó:
 
-Los estímulos dual-mono (narrowbands, pink, white, heavyRain) tienen una diferencia
-L−R de ~−68 dB (ruido de fondo, inaudible) pero **L ≠ R bit a bit**. Un downmix a mono
-promedia (L+R)/2 y **deja de ser bit-exacto** respecto a cualquiera de los canales
-(verificado: el MD5 del mono no coincide con el del canal izquierdo). Sería solo
-"perceptualmente lossless", lo que **viola la regla dura de losslessness** y requiere
-validación clínica A/B (responsable: Magali). Se deja como mejora opcional pendiente
-de OK clínico (ver abajo).
+| Canal | mean_volume | Diagnóstico |
+|---|---|---|
+| L (izquierdo) | −26,2 dB | **~14 dB más bajo (exportación defectuosa)** |
+| R (derecho) | −12,2 dB | nivel correcto |
 
-## Resultados
+Sus vecinos (`narrowband6k`, `narrowband10k`) están en **−12 dB en ambos canales**. Por eso
+**el canal derecho de 8k es el correcto** (coincide con la calibración de la serie). La
+corrección NO fue promediar (L+R)/2 —daría un nivel intermedio, más bajo que el resto—,
+sino **tomar el canal derecho (el bueno) y volverlo mono**. Resultado: `narrowband8k`
+quedó en **−12,2 dB**, alineado con toda la serie.
 
-| Archivo | Canales | L−R max (dB) | WAV (bytes) | FLAC (bytes) | Lossless |
-|---|---|---|---|---|---|
-| heavyRain | 2 (dual-mono) | −51.4 | 11.560.878 | 6.296.349 | ✅ bit-exacto |
-| narrowband250 | 2 (dual-mono) | −67.4 | 1.911.950 | 897.340 | ✅ |
-| narrowband500 | 2 (dual-mono) | −68.0 | 1.913.806 | 925.360 | ✅ |
-| narrowband1k | 2 (dual-mono) | −68.0 | 1.913.806 | 955.512 | ✅ |
-| narrowband2k | 2 (dual-mono) | −67.4 | 1.913.806 | 977.188 | ✅ |
-| narrowband3k | 2 (dual-mono) | −68.0 | 1.913.806 | 985.480 | ✅ |
-| narrowband4k | 2 (dual-mono) | −68.0 | 1.913.806 | 988.914 | ✅ |
-| narrowband6k | 2 (dual-mono) | −66.8 | 1.913.806 | 992.160 | ✅ |
-| narrowband8k | 2 (**estéreo real**) | **−1.9** | 1.913.808 | 1.535.744 | ✅ |
-| narrowband10k | 2 (dual-mono) | −68.0 | 1.913.806 | 986.172 | ✅ |
-| narrowband12k | 2 (dual-mono) | −68.0 | 1.913.806 | 981.848 | ✅ |
-| narrow | 1 (ya mono) | — | 880.304 | 661.491 | ✅ |
-| pinkNoise | 2 (dual-mono) | −68.0 | 1.910.734 | 817.374 | ✅ |
-| whiteNoise | 2 (dual-mono) | −68.0 | 1.911.886 | 946.541 | ✅ |
-| Rain | 2 (**estéreo real**) | −0.0 | 6.106.378 | 4.416.110 | ✅ |
-| Water | 2 (**estéreo real**) | −2.8 | 24.787.854 | 18.266.497 | ✅ |
+### Uniformidad de la serie narrowband tras la corrección
 
-**Total audio: 63,3 MB → 39,7 MB → reducción ~37,2% (100% bit-exacto lossless).**
-`static/` total: 68 MB → 41 MB.
+Todas en ~−12 dB (mean): 250 (−12,6), 500 (−12,3), 1k (−12,2), 2k (−12,0), 3k (−12,0),
+4k (−12,1), 6k (−12,0), **8k (−12,2)**, 10k (−12,4), 12k (−12,7). Serie pareja.
 
-## Pendiente de validación clínica (Magali) — opcionales
+## Resultados de peso
 
-Estas mejoras aumentan el ahorro pero **no son bit-exactas** / requieren criterio clínico.
-No se aplicaron para no violar la regla de losslessness sin OK humano.
+| Archivo | Origen | FLAC mono (bytes) |
+|---|---|---|
+| heavyRain | dual-mono → mono | ~4,1 MB |
+| narrowband250…12k (×10) | dual-mono → mono (8k desde canal R) | ~0,78 MB c/u |
+| narrow | ya mono | ~0,66 MB |
+| pinkNoise | dual-mono → mono | ~0,78 MB |
+| whiteNoise | dual-mono → mono | ~0,95 MB |
+| Rain | estéreo → mono | ~2,0 MB |
+| Water | estéreo → mono | ~9 MB |
 
-1. **Downmix a mono de los 12 dual-mono** (narrowbands ≠8k, pink, white, heavyRain):
-   llevaría el total a ~36,2 MB (**−42,7%**, +3,5 MB de ahorro). Descarta la diferencia
-   L−R de −68 dB (inaudible). Decisión clínica + escucha A/B.
-2. **narrowband8k es estéreo real (−1.9 dB)**, anómalo: todos los demás narrowbands son
-   dual-mono. Probable mala exportación. Se dejó **estéreo** para mantener losslessness.
-   Si clínicamente debe ser mono, hay que re-exportar el estímulo original (no inventar
-   el canal faltante).
-3. **Loops de ruidos estacionarios** (`Water` 140 s, `heavyRain` 60 s, `Rain` 34 s):
-   recortar a ~20–30 s con crossfade y `loop=true`. Gran ahorro adicional, pero requiere
-   prueba de que el loop no introduce artefactos + OK clínico (T2.5 del plan).
+**Total audio: 63,3 MB → ~25 MB → reducción ~61%.** `static/` total: 68 MB → 26 MB.
+
+## Notas / pendientes
+
+- **Rain y Water** eran grabaciones **estéreo** (ambiente: lluvia y agua). Siguiendo la
+  regla "L y R al mismo nivel en todos los audios" también se pasaron a **mono**. Si para
+  esos dos sonidos de ambiente preferís conservar el estéreo (imagen espacial), avisá y los
+  revierto a estéreo FLAC (solo esos dos). Los másters originales están intactos.
+- **Loops** de ruidos estacionarios (Water/heavyRain/Rain): ahorro adicional posible
+  recortando a ~20–30 s con crossfade; requiere validación de que el loop no introduce
+  artefactos (T2.5, opcional).
 
 ## Backup
 
 Los 16 WAV originales (másters) están en `audio_source/` (gitignored) y en el historial
-de git (commit previo a esta fase). Nada se perdió.
+de git. La corrección de 8k y los downmix se hicieron siempre desde esos originales.
