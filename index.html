@@ -726,5 +726,14 @@
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8c3df35538354bb1a731237de19f7abf"}'></script>
     <!-- End Cloudflare Web Analytics -->
 
+    <!-- Service Worker (PWA: caché offline) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('sw.js').catch(function () { /* sin SW si falla */ });
+            });
+        }
+    </script>
+
 </body>
 </html>

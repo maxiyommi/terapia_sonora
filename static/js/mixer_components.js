@@ -6,7 +6,7 @@ const volumeControlPink = document.querySelector('[data-action="volume-pink"]');
 const onOffSwitchPink = document.querySelector('.switch_pink');
 
 const gainNodePink = new Tone.Gain(0.05);
-const noisePink = new Tone.Player("./static/media/audio/pinkNoise.flac");
+const noisePink = new Tone.Player(); /* lazy: se carga en lazyAudioLoad() */
 noisePink.loop = true;
 gainNodePink.gain.value = 0;
 noisePink.connect(gainNodePink);
@@ -65,7 +65,7 @@ const volumeControlWhite = document.querySelector('[data-action="volume-white"]'
 const onOffSwitchWhite = document.querySelector('.switch_white');
 
 const gainNodeWhite = new Tone.Gain(0.5);
-const noiseWhite = new Tone.Player("./static/media/audio/whiteNoise.flac");
+const noiseWhite = new Tone.Player(); /* lazy: se carga en lazyAudioLoad() */
 noiseWhite.loop = true;
 gainNodeWhite.gain.value = 0;
 noiseWhite.connect(gainNodeWhite);
@@ -142,20 +142,20 @@ const Narrow12k = document.querySelector('[data-action="narrow12k"]');
 const gainNodeNarrow = new Tone.Gain(0.5);
 
 /* First it set the 500 narrowband */
-var noiseNarrow = new Tone.Player("./static/media/audio/narrowband500.flac");
+var noiseNarrow = new Tone.Player(); /* lazy: se carga en lazyAudioLoad() */
 noiseNarrow.loop = true;
 
-/* Second it load the rest and save it in a buffer */
-const buffer250 = new Tone.Buffer("./static/media/audio/narrowband250.flac");
-const buffer500 = new Tone.Buffer("./static/media/audio/narrowband500.flac");
-const buffer1k = new Tone.Buffer("./static/media/audio/narrowband1k.flac");
-const buffer2k = new Tone.Buffer("./static/media/audio/narrowband2k.flac");
-const buffer3k = new Tone.Buffer("./static/media/audio/narrowband3k.flac");
-const buffer4k = new Tone.Buffer("./static/media/audio/narrowband4k.flac");
-const buffer6k = new Tone.Buffer("./static/media/audio/narrowband6k.flac");
-const buffer8k = new Tone.Buffer("./static/media/audio/narrowband8k.flac");
-const buffer10k = new Tone.Buffer("./static/media/audio/narrowband10k.flac");
-const buffer12k = new Tone.Buffer("./static/media/audio/narrowband12k.flac");
+/* Second it load the rest and save it in a buffer (lazy: ver lazyAudioLoad) */
+const buffer250 = new Tone.Buffer();
+const buffer500 = new Tone.Buffer();
+const buffer1k = new Tone.Buffer();
+const buffer2k = new Tone.Buffer();
+const buffer3k = new Tone.Buffer();
+const buffer4k = new Tone.Buffer();
+const buffer6k = new Tone.Buffer();
+const buffer8k = new Tone.Buffer();
+const buffer10k = new Tone.Buffer();
+const buffer12k = new Tone.Buffer();
 
 gainNodeNarrow.gain.value = 0;
 noiseNarrow.connect(gainNodeNarrow);
@@ -544,7 +544,7 @@ const volumeControlRain = document.querySelector('[data-action="volume-rain"]');
 const onOffSwitchRain = document.querySelector('.switch_rain');
 
 const gainNodeRain = new Tone.Gain(0.5);
-const buff = new Tone.Buffer("./static/media/audio/Rain.flac");
+const buff = new Tone.Buffer(); /* lazy: se carga en lazyAudioLoad() */
 var noiseRain = new Tone.Player(buff);
 noiseRain.loop = true;
 
@@ -608,7 +608,7 @@ const onOffSwitchHeavyRain = document.querySelector('.switch_heavyRain');
 
 const gainNodeHeavyRain = new Tone.Gain(0.5);
 var norm = new Tone.Normalize(0, 1);
-const noiseHeavyRain = new Tone.Player("./static/media/audio/heavyRain.flac").connect(norm);
+const noiseHeavyRain = new Tone.Player().connect(norm); /* lazy: se carga en lazyAudioLoad() */
 noiseHeavyRain.loop = true;
 
 
@@ -677,7 +677,7 @@ const volumeControlWater = document.querySelector('[data-action="volume-water"]'
 const onOffSwitchWater = document.querySelector('.switch_water');
 
 const gainNodeWater = new Tone.Gain(0.5);
-const noiseWater = new Tone.Player("./static/media/audio/Water.flac");
+const noiseWater = new Tone.Player(); /* lazy: se carga en lazyAudioLoad() */
 noiseWater.loop = true;
 
 gainNodeWater.gain.value = 0;
@@ -936,5 +936,59 @@ $(document).on('click', function(event) {
 });
 
 /********Lightbox**********/
+
+/********Lazy load de audios**********/
+/*
+  Los Tone.Player / Tone.Buffer se construyen vacíos arriba y sus archivos (~40 MB)
+  se descargan recién acá, cuando el mixer está por entrar en viewport (rootMargin
+  amplio para precargar antes de que el usuario llegue) o al primer click en Play.
+  Así la carga inicial de la página no baja los audios, manteniendo el mismo
+  comportamiento percibido del mixer (queda listo antes de interactuar).
+*/
+(function () {
+    var audioLoaded = false;
+    function lazyAudioLoad() {
+        if (audioLoaded) return;
+        audioLoaded = true;
+        var base = "./static/media/audio/";
+        noisePink.load(base + "pinkNoise.flac");
+        noiseWhite.load(base + "whiteNoise.flac");
+        noiseNarrow.load(base + "narrowband500.flac");
+        buffer250.load(base + "narrowband250.flac");
+        buffer500.load(base + "narrowband500.flac");
+        buffer1k.load(base + "narrowband1k.flac");
+        buffer2k.load(base + "narrowband2k.flac");
+        buffer3k.load(base + "narrowband3k.flac");
+        buffer4k.load(base + "narrowband4k.flac");
+        buffer6k.load(base + "narrowband6k.flac");
+        buffer8k.load(base + "narrowband8k.flac");
+        buffer10k.load(base + "narrowband10k.flac");
+        buffer12k.load(base + "narrowband12k.flac");
+        buff.load(base + "Rain.flac");
+        noiseHeavyRain.load(base + "heavyRain.flac");
+        noiseWater.load(base + "Water.flac");
+    }
+
+    var section = document.getElementById("demostracion");
+    if ("IntersectionObserver" in window && section) {
+        var obs = new IntersectionObserver(function (entries) {
+            for (var i = 0; i < entries.length; i++) {
+                if (entries[i].isIntersecting) {
+                    lazyAudioLoad();
+                    obs.disconnect();
+                    break;
+                }
+            }
+        }, { rootMargin: "400px 0px" });
+        obs.observe(section);
+    } else {
+        lazyAudioLoad();
+    }
+
+    /* Fallback: si el usuario toca Play antes de que cargue, dispara la carga ya. */
+    if (typeof playButton !== "undefined" && playButton) {
+        playButton.addEventListener("click", lazyAudioLoad, false);
+    }
+})();
 
 
